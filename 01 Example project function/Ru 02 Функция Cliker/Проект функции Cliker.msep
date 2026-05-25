@@ -1,0 +1,18 @@
+{
+"name":"Проект функции Cliker",
+"autosave":"true",
+"scripts":[
+{"file":"1 Приветствие.py","necessary":"true"},
+{"file":"2 Выполнение команд.py","necessary":"false"},
+{"file":"3 Создание отчёта.py","necessary":"false"},
+{"file":"4 Прощание.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"},
+{"file":"MCLK.py"}
+],
+"templates":[
+{"file":"Отчет.docx"}
+]
+}

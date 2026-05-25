@@ -1,0 +1,21 @@
+{
+"name":"Проект выполнения всех функций",
+"autosave":"true",
+"scripts":[
+{"file":"01 Приветствие.py","necessary":"true"},
+{"file":"02 Пример функции Stage.py","necessary":"false"},
+{"file":"03 Пример функции Messenger.py","necessary":"false"},
+{"file":"04 Пример функции Driver.py","necessary":"false"},
+{"file":"05 Пример функции Utility.py","necessary":"false"},
+{"file":"06 Пример функции Plugin.py","necessary":"false"},
+{"file":"07 Пример функции Program.py","necessary":"false"},
+{"file":"08 Прощание.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"}
+],
+"templates":[
+{"file":"Отчет.docx"}
+]
+}

@@ -1,0 +1,74 @@
+{
+"scripts":
+[
+{"name":"01 Registration verification unit","smark":"protection"},
+{"name":"02 Initialization devices. Drivers Fluke5000 and AgilentDMM","smark":"protection"},
+{"name":"03 Verification Agilent34401A by Fluke5520A","smark":""},
+{"name":"04 Save word report","smark":"protection"}
+],
+"report":
+[
+{"name":"IDC","kind":"table","info":"","script":"03 Verification Agilent34401A by Fluke5520A",
+"data":"1;1,00000;1,00000;0,00000;1,1m;OK;\r
+3;2,00000;2,00000;0,00000;3,0m;OK;\r
+"},
+{"name":"TYPE_SETTING_FLUKE5520A","kind":"string","info":"Device setting type","script":"03 Verification Agilent34401A by Fluke5520A",
+"data":"Simulation"},
+{"name":"TYPE_SETTING_AGILENT34401A","kind":"string","info":"Device setting type","script":"03 Verification Agilent34401A by Fluke5520A",
+"data":"Simulation"}
+
+],
+"tree":
+[
+{"line":"0","name":"Verification Fluke5520A Agilent34401A","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"01 Registration verification unit","type":"script","project":"Verification Fluke5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"2","name":"Equipment registration$Reg","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"01 Registration verification unit","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"3","name":"02 Initialization devices. Drivers Fluke5000 and AgilentDMM","type":"script","project":"Verification Fluke5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"4","name":"Initialization AGILENT34401A$Init","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"02 Initialization devices. Drivers Fluke5000 and AgilentDMM","region":"","status":"passed","pcode":"5","pcount":"2"},
+{"line":"5","name":"Initialization FLUKE5520A$Init","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"02 Initialization devices. Drivers Fluke5000 and AgilentDMM","region":"","status":"passed","pcode":"5","pcount":"2"},
+{"line":"6","name":"03 Verification Agilent34401A by Fluke5520A","type":"script","project":"Verification Fluke5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"7","name":"Determining the absolute error of AC voltage measurement$VAC","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"8","name":"Meas 1$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"9","name":"Meas 2$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"10","name":"Meas 3$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"11","name":"Meas 4$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"12","name":"Meas 5$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"13","name":"Meas 6$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"14","name":"Meas 7$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"15","name":"Meas 8$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"16","name":"Meas 9$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"17","name":"Meas 10$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"18","name":"Meas 11$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"19","name":"Meas 12$VAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of AC voltage measurement$VAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"20","name":"Determining the absolute error of DC voltage measurement$VDC","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"21","name":"Meas 1$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"22","name":"Meas 2$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"23","name":"Meas 3$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"24","name":"Meas 4$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"25","name":"Meas 5$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"26","name":"Meas 6$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"27","name":"Meas 7$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"28","name":"Meas 8$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"29","name":"Meas 9$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"30","name":"Meas 10$VDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determining the absolute error of DC voltage measurement$VDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"31","name":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"32","name":"Meas 1$R4","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","status":"empty","pcode":"3","pcount":"8"},
+{"line":"33","name":"Meas 2$R4","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","status":"empty","pcode":"3","pcount":"8"},
+{"line":"34","name":"Meas 3$R4","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","status":"empty","pcode":"3","pcount":"8"},
+{"line":"35","name":"Meas 4$R4","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","status":"empty","pcode":"3","pcount":"8"},
+{"line":"36","name":"Determination of the measurement error of the resistance of a 2-wire circuit$R2","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"37","name":"Meas 1$R2","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the measurement error of the resistance of a 2-wire circuit$R2","status":"empty","pcode":"3","pcount":"8"},
+{"line":"38","name":"Meas 2$R2","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the measurement error of the resistance of a 2-wire circuit$R2","status":"empty","pcode":"3","pcount":"8"},
+{"line":"39","name":"Meas 3$R2","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the measurement error of the resistance of a 2-wire circuit$R2","status":"empty","pcode":"3","pcount":"8"},
+{"line":"40","name":"Determination of the absolute error of measuring the strength of alternating current$IAC","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"41","name":"Meas 1$IAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the absolute error of measuring the strength of alternating current$IAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"42","name":"Meas 2$IAC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the absolute error of measuring the strength of alternating current$IAC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"43","name":"Determination of the absolute error in the measurement of direct current$IDC","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"44","name":"Meas 1$IDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the absolute error in the measurement of direct current$IDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"45","name":"Meas 2$IDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the absolute error in the measurement of direct current$IDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"46","name":"Meas 3$IDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the absolute error in the measurement of direct current$IDC","status":"empty","pcode":"3","pcount":"8"},
+{"line":"47","name":"Meas 4$IDC","type":"hesh","project":"Verification Fluke5520A Agilent34401A","script":"03 Verification Agilent34401A by Fluke5520A","region":"Determination of the absolute error in the measurement of direct current$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"48","name":"04 Save word report","type":"script","project":"Verification Fluke5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"49","name":"Save word report$Word","type":"region","project":"Verification Fluke5520A Agilent34401A","script":"04 Save word report","region":"","status":"empty","pcode":"0","pcount":"2"}
+]
+}

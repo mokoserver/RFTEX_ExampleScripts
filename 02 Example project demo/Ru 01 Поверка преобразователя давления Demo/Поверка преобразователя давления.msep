@@ -1,0 +1,18 @@
+{
+"name":"Поверка преобразователя давления",
+"autosave":"true",
+"scripts":[
+{"file":"1. Регистрация образца.py","necessary":"true"},
+{"file":"2. Поверка образца.py","necessary":"true"},
+{"file":"3. Создание протокола.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"},
+{"file":"pressurelib.py"}
+],
+"templates":[
+{"file":"Протокол ADT761.docx"},
+{"file":"Протоколы ADT761.docx"}
+]
+}

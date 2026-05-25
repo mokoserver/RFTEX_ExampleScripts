@@ -1,0 +1,21 @@
+{
+"scripts":
+[
+{"name":"Exclusive","smark":"done"}
+],
+"report":
+[
+{"name":"test","kind":"string","info":"","script":"Exclusive",
+"data":"OK"},
+{"name":"test1","kind":"string","info":"","script":"1 meas",
+"data":"OK"},
+{"name":"test2","kind":"string","info":"","script":"second ffffff",
+"data":"OK"}
+
+],
+"tree":
+[
+{"line":"0","name":"Exclusive","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"Exclusive","type":"script","project":"Exclusive","script":"","region":"","status":"empty","pcode":"0","pcount":"1"}
+]
+}

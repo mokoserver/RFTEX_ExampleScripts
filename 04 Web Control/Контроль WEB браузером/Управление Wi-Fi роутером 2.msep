@@ -1,0 +1,17 @@
+{
+"name":"Управление Wi-Fi роутером 2",
+"autosave":"true",
+"scripts":[
+{"file":"01 Приветствие.py","necessary":"true"},
+{"file":"03 Измерения параметров сигнала (временные и частотные характеристики) с изменением частоты сигнала и постоянным уровнем мощности.py","necessary":"true"},
+{"file":"05 Сохранить отчет.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MWEB.py"},
+{"file":"WebActions.py"}
+],
+"templates":[
+{"file":"Wi-Fi отчет Word.docx"}
+]
+}

@@ -1,0 +1,15 @@
+{
+"name":"Проект функции path",
+"autosave":"true",
+"scripts":[
+{"file":"1 Приветствие.py","necessary":"true"},
+{"file":"2 Прощание.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"}
+],
+"templates":[
+{"file":"Отчет.docx"}
+]
+}

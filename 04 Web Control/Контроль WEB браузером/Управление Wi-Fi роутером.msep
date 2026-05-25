@@ -1,0 +1,20 @@
+{
+"name":"Управление Wi-Fi роутером",
+"autosave":"true",
+"scripts":[
+{"file":"01 Приветствие.py","necessary":"true"},
+{"file":"02 Измерения.py","necessary":"false"},
+{"file":"03 Измерения 2.py","necessary":"false"},
+{"file":"04 Минимизация измерений.py","necessary":"false"},
+{"file":"05 Сохранить отчет.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MWEB.py"},
+{"file":"WebActions.py"},
+{"file":"TestActions.py"}
+],
+"templates":[
+{"file":"Wi-Fi отчет Word.docx"}
+]
+}

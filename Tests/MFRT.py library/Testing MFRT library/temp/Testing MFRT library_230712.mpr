@@ -1,0 +1,65 @@
+{
+"scripts":
+[
+{"name":"1 Greeting","smark":"done"},
+{"name":"2 Testing MFRT convert string to float","smark":"done"},
+{"name":"5 Farewell","smark":"done"}
+],
+"report":
+[
+{"name":"StringToFloat","kind":"table","info":"Input number#150;Output number#150;","script":"2 Testing MFRT convert string to float",
+"data":"100f;1e-13;\r
+100.1f;1e-13;\r
+100,1f;1e-13;\r
+100.01f;1e-13;\r
+100,01f;1e-13;\r
+100.001u;0.000100001;\r
+100,001u;0.000100001;\r
+100m;0.1;\r
+100.1m;0.1001;\r
+100,1m;0.1001;\r
+100.01m;0.10001;\r
+100,01m;0.10001;\r
+100.001m;0.100001;\r
+100,001m;0.100001;\r
+100;100.0;\r
+100.1;100.1;\r
+100,1;100.1;\r
+100.01;100.01;\r
+100,01;100.01;\r
+100.001;100.001;\r
+100,001;100.001;\r
+100k;100000.0;\r
+100.1k;100100.0;\r
+100,1k;100100.0;\r
+100.01k;100010.0;\r
+100,01k;100010.0;\r
+100.001k;100001.0;\r
+100,001k;100001.0;\r
+100M;100000000.0;\r
+100.1M;100100000.0;\r
+100,1M;100100000.0;\r
+100.01M;100010000.0;\r
+100,01M;100010000.0;\r
+100.001M;100001000.0;\r
+100,001M;100001000.0;\r
+100;100.0;\r
+100.001;100.001;\r
+100s;100s;\r
+100rh;100rh;\r
+0.0001rh;0.0001rh;\r
+"}
+
+],
+"tree":
+[
+{"line":"0","name":"Testing MFRT library","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"1 Greeting","type":"script","project":"Testing MFRT library","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"2","name":"Status","type":"region","project":"Testing MFRT library","script":"1 Greeting","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"3","name":"Greeting","type":"hesh","project":"Testing MFRT library","script":"1 Greeting","region":"Status","status":"passed","pcode":"5","pcount":"2"},
+{"line":"4","name":"2 Testing MFRT convert string to float","type":"script","project":"Testing MFRT library","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"5","name":"5 Farewell","type":"script","project":"Testing MFRT library","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"6","name":"Status","type":"region","project":"Testing MFRT library","script":"5 Farewell","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"7","name":"Farewell","type":"hesh","project":"Testing MFRT library","script":"5 Farewell","region":"Status","status":"passed","pcode":"5","pcount":"2"}
+]
+}

@@ -1,0 +1,12 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# JetBrains / PyCharm
+.idea/
+
+# Windows
+Thumbs.db
+Desktop.ini

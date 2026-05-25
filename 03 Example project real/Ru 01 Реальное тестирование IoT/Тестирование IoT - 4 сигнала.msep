@@ -1,0 +1,20 @@
+{
+"name":"Тестирование IoT - 4 сигнала",
+"autosave":"true",
+"scripts":[
+{"file":"01 Проверки регистрации.py","necessary":"true"},
+{"file":"02 Инициализация устройств. Драйвера BK1697, APPA207, FY6900.py","necessary":"true"},
+{"file":"03 Тестирование IoT - 4 сигнала.py","necessary":"false"},
+{"file":"04 Сохранение word отчета.py","necessary":"true"}
+],
+"libraries":[
+{"file":"MFRT.py"},
+{"file":"RFSE.py"},
+{"file":"MOSC.py"},
+{"file":"MTLG.py"},
+{"file":"MGPH.py"}
+],
+"templates":[
+{"file":"Отчет реального тестирования IoT - 4 сигнала.docx"}
+]
+}

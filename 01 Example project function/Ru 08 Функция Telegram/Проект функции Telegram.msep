@@ -1,0 +1,17 @@
+{
+"name":"Проект функции Telegram",
+"autosave":"true",
+"scripts":[
+{"file":"1 Приветствие.py","necessary":"true"},
+{"file":"2 Использование Telegram.py","necessary":"false"},
+{"file":"3 Прощание.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"},
+{"file":"MTLG.py"}
+],
+"templates":[
+{"file":"Отчет.docx"}
+]
+}

@@ -1,0 +1,183 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 14px; /* Уменьшаем базовый размер шрифта */
+}
+
+.container {
+    background: #fff;
+    padding: 15px 25px; /* Уменьшаем внутренние отступы */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Уменьшаем ширину контейнера */
+}
+
+h1 {
+    font-size: 22px; /* Уменьшаем заголовок */
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
+
+h3 {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 10px; /* Уменьшаем отступы между группами */
+}
+
+label {
+    display: block;
+    margin-bottom: 4px; /* Уменьшаем отступ у лейблов */
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 6px; /* Уменьшаем внутренние отступы полей */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 8px; /* Уменьшаем кнопки */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#reboot-btn {
+    background-color: #dc3545;
+}
+
+#reboot-btn:hover {
+    background-color: #c82333;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.settings-group, .status-group {
+    border: 1px solid #eee;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.form-group-read-only {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.form-group-read-only label {
+    font-weight: bold;
+}
+
+.log-area {
+    margin-top: 15px;
+    border: 1px solid #eee;
+    padding: 8px;
+    background-color: #fafafa;
+    height: 80px; /* Уменьшаем высоту лога */
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+
+#log-output {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    white-space: pre-wrap;
+}
+
+/* --- Modal Styles --- */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    width: 350px;
+}
+
+.modal-header h3 {
+    margin-top: 0;
+}
+
+.modal-body p {
+    margin: 8px 0;
+}
+
+.modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-footer button {
+    width: auto;
+    padding: 8px 16px;
+    margin-left: 10px;
+}
+
+.modal-footer .cancel-btn {
+    background-color: #6c757d;
+}
+
+.modal-footer .cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+/* --- Action Buttons --- */
+.action-buttons a {
+    margin-right: 15px;
+}
+
+.ez_img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}

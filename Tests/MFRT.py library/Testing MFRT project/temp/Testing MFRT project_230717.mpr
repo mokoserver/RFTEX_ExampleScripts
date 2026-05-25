@@ -1,0 +1,89 @@
+{
+"scripts":
+[
+{"name":"Testing MFRT convert string to float","smark":"done"},
+{"name":"Testing MKFR - float to string function","smark":"protection"}
+],
+"report":
+[
+{"name":"StringToFloat","kind":"table","info":"Input number#150;Output number#150;","script":"Testing MFRT convert string to float",
+"data":"100.00000u;0.0001;\r
+100.0000u;0.0001;\r
+100.000u;0.0001;\r
+100.00u;0.0001;\r
+100.0u;0.0001;\r
+100u;0.0001;\r
+100.00000m;0.1;\r
+100.0000m;0.1;\r
+100.000m;0.1;\r
+100.00m;0.1;\r
+100.0m;0.1;\r
+100m;0.1;\r
+100.00000;100.0;\r
+100.0000;100.0;\r
+100.000;100.0;\r
+100.00;100.0;\r
+100.0;100.0;\r
+100;100.0;\r
+100.00000k;100000.0;\r
+100.0000k;100000.0;\r
+100.000k;100000.0;\r
+100.00k;100000.0;\r
+100.0k;100000.0;\r
+100k;100000.0;\r
+100.00000M;100000000.0;\r
+100.0000M;100000000.0;\r
+100.000M;100000000.0;\r
+100.00M;100000000.0;\r
+100.0M;100000000.0;\r
+100M;100000000.0;\r
+"},
+{"name":"StringToFloatFailedDelimiter","kind":"table","info":"Input number#150;Output number#150;","script":"Testing MFRT convert string to float",
+"data":"100/00000u;0.0001;\r
+100#0000u;0.0001;\r
+100*000u;0.0001;\r
+100)00u;0.0001;\r
+100(0u;0.0001;\r
+100u.;100u.;\r
+100/00000m;0.1;\r
+100#0000m;0.1;\r
+100*000m;0.1;\r
+100)00m;0.1;\r
+100(0m;0.1;\r
+100m.;100m.;\r
+100/00000;100.0;\r
+100#0000;100.0;\r
+100*000;100.0;\r
+100)00;100.0;\r
+100(0;100.0;\r
+100.;100.0;\r
+100/00000k;100000.0;\r
+100#0000k;100000.0;\r
+100*000k;100000.0;\r
+100)00k;100000.0;\r
+100(0k;100000.0;\r
+100k.;100k.;\r
+100/00000M;100000000.0;\r
+100#0000M;100000000.0;\r
+100*000M;100000000.0;\r
+100)00M;100000000.0;\r
+100(0M;100000000.0;\r
+100M.;100M.;\r
+"},
+{"name":"StringToFloatFailedPrefixOrValue","kind":"table","info":"Input number#150;Output number#150;","script":"Testing MFRT convert string to float",
+"data":"100;100.0;\r
+100.001;100.001;\r
+100s;100s;\r
+100rh;100rh;\r
+0.0001rh;0.0001rh;\r
+1212||m;1212||m;\r
+"}
+
+],
+"tree":
+[
+{"line":"0","name":"Testing MFRT project","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"Testing MFRT convert string to float","type":"script","project":"Testing MFRT project","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"2","name":"Testing MKFR - float to string function","type":"script","project":"Testing MFRT project","script":"","region":"","status":"empty","pcode":"0","pcount":"1"}
+]
+}

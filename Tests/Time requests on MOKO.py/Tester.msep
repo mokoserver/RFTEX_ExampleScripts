@@ -1,0 +1,13 @@
+{
+"name":"Tester",
+"autosave":"true",
+"scripts":[
+{"file":"Testing requests.py","necessary":"false"}
+],
+"libraries":[
+{"file":"RFSE.py"}
+],
+"templates":[
+
+]
+}

@@ -1,0 +1,15 @@
+{
+"scripts":
+[
+{"name":"Testing Autoit","smark":"done"}
+],
+"report":
+[
+
+],
+"tree":
+[
+{"line":"0","name":"Testing Autoit","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"Testing Autoit","type":"script","project":"Testing Autoit","script":"","region":"","status":"empty","pcode":"0","pcount":"1"}
+]
+}

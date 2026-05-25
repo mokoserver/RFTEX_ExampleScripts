@@ -1,0 +1,19 @@
+{
+"name":"Проект функции Messenger",
+"autosave":"true",
+"scripts":[
+{"file":"1 Приветствие.py","necessary":"true"},
+{"file":"2 Функция Messenger - Report save.py","necessary":"false"},
+{"file":"3 Функция Messenger - Report clear.py","necessary":"false"},
+{"file":"4 Функция Messenger - Report delete.py","necessary":"false"},
+{"file":"5 Изображение messenger.py","necessary":"false"},
+{"file":"6 Прощание.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"}
+],
+"templates":[
+{"file":"Отчет.docx"}
+]
+}

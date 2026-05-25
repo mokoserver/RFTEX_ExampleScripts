@@ -1,0 +1,73 @@
+{
+"scripts":
+[
+{"name":"01 Приветствие","smark":"passed"},
+{"name":"02 Измерения","smark":""},
+{"name":"03 Измерения 2","smark":""},
+{"name":"04 Минимизация измерений","smark":""},
+{"name":"05 Сохранить отчет","smark":"protection"}
+],
+"report":
+[
+{"name":"Время выполнения скрипта","kind":"table","info":"Название скрипта#350;Время запуска#120;Время окончания#120;Время исполнения#150","script":"01 Приветствие",
+"data":"01 Приветствие;29.04.2026 12:46:35;29.04.2026 12:46:37;00:00:02;\r
+"}
+
+],
+"tree":
+[
+{"line":"0","name":"Управление Wi-Fi роутером","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"01 Приветствие","type":"script","project":"Управление Wi-Fi роутером","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"2","name":"02 Измерения","type":"script","project":"Управление Wi-Fi роутером","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"3","name":"Шаг 2: Проведение измерений$MEASURE","type":"region","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"","status":"empty","pcode":"0","pcount":"4"},
+{"line":"4","name":"Измерение 1$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"5","name":"Измерение 2$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"6","name":"Измерение 3$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"7","name":"Измерение 4$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"8","name":"Измерение 5$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"9","name":"Измерение 6$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"10","name":"Измерение 7$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"11","name":"Измерение 8$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"12","name":"Измерение 9$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"13","name":"Измерение 10$MEASURE","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 2: Проведение измерений$MEASURE","status":"empty","pcode":"3","pcount":"4"},
+{"line":"14","name":"Шаг 3: Дополнительные измерения$MEASURE2","type":"region","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"","status":"empty","pcode":"0","pcount":"4"},
+{"line":"15","name":"Измерение 11$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"16","name":"Измерение 12$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"17","name":"Измерение 13$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"18","name":"Измерение 14$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"19","name":"Измерение 15$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"20","name":"Измерение 16$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"21","name":"Измерение 17$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"22","name":"Измерение 18$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"23","name":"Измерение 19$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"24","name":"Измерение 20$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"Шаг 3: Дополнительные измерения$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"25","name":"Шаг 4: Закрыть браузер$CLOSE1","type":"region","project":"Управление Wi-Fi роутером","script":"02 Измерения","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"26","name":"03 Измерения 2","type":"script","project":"Управление Wi-Fi роутером","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"27","name":"Шаг 1: Инициализация и вход (Пакет 2)$INIT2","type":"region","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"28","name":"Скрыть браузер (Пакет 2)$HIDE2","type":"region","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"29","name":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","type":"region","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"","status":"empty","pcode":"0","pcount":"4"},
+{"line":"30","name":"Измерение 21$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"31","name":"Измерение 22$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"32","name":"Измерение 23$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"33","name":"Измерение 24$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"34","name":"Измерение 25$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"35","name":"Измерение 26$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"36","name":"Измерение 27$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"37","name":"Измерение 28$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"38","name":"Измерение 29$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"39","name":"Измерение 30$MEASURE2","type":"hesh","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"Шаг 2: Проведение измерений (Пакет 2)$MEASURE2","status":"empty","pcode":"3","pcount":"4"},
+{"line":"40","name":"Шаг 3: Закрыть браузер (Пакет 2)$CLOSE2","type":"region","project":"Управление Wi-Fi роутером","script":"03 Измерения 2","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"41","name":"04 Минимизация измерений","type":"script","project":"Управление Wi-Fi роутером","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"42","name":"Шаг 1: Инициализация и вход (Пакет 3)$INIT3","type":"region","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"43","name":"Свернуть браузер (Пакет 3)$MIN3","type":"region","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"44","name":"Шаг 2: Проведение измерений (Пакет 3)$MEASURE3","type":"region","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"","status":"empty","pcode":"0","pcount":"4"},
+{"line":"45","name":"Измерение 31$MEASURE3","type":"hesh","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"Шаг 2: Проведение измерений (Пакет 3)$MEASURE3","status":"empty","pcode":"3","pcount":"4"},
+{"line":"46","name":"Измерение 32$MEASURE3","type":"hesh","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"Шаг 2: Проведение измерений (Пакет 3)$MEASURE3","status":"empty","pcode":"3","pcount":"4"},
+{"line":"47","name":"Измерение 33$MEASURE3","type":"hesh","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"Шаг 2: Проведение измерений (Пакет 3)$MEASURE3","status":"empty","pcode":"3","pcount":"4"},
+{"line":"48","name":"Измерение 34$MEASURE3","type":"hesh","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"Шаг 2: Проведение измерений (Пакет 3)$MEASURE3","status":"empty","pcode":"3","pcount":"4"},
+{"line":"49","name":"Измерение 35$MEASURE3","type":"hesh","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"Шаг 2: Проведение измерений (Пакет 3)$MEASURE3","status":"empty","pcode":"3","pcount":"4"},
+{"line":"50","name":"Шаг 3: Закрыть браузер (Пакет 3)$CLOSE3","type":"region","project":"Управление Wi-Fi роутером","script":"04 Минимизация измерений","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"51","name":"05 Сохранить отчет","type":"script","project":"Управление Wi-Fi роутером","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"52","name":"Создание протокола$REPORT","type":"region","project":"Управление Wi-Fi роутером","script":"05 Сохранить отчет","region":"","status":"empty","pcode":"0","pcount":"2"}
+]
+}

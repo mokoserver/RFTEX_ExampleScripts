@@ -1,0 +1,144 @@
+{
+"scripts":
+[
+{"name":"01 Registration verification unit","smark":"done"},
+{"name":"02 Initialization devices","smark":"done"},
+{"name":"03 Verification Ag34401A by Fl5520A Demo","smark":"done"},
+{"name":"04 Save word report","smark":"done"}
+],
+"report":
+[
+{"name":"ProtocolNumber","kind":"string","info":"Measurement protocol number","script":"01 Registration verification unit",
+"data":""},
+{"name":"CurrentDate","kind":"string","info":"The current date","script":"01 Registration verification unit",
+"data":""},
+{"name":"ModelDevice","kind":"string","info":"Model of device under test","script":"01 Registration verification unit",
+"data":""},
+{"name":"SerialNumber","kind":"string","info":"Device serial number","script":"01 Registration verification unit",
+"data":""},
+{"name":"Owner","kind":"string","info":"Customer","script":"01 Registration verification unit",
+"data":""},
+{"name":"Request","kind":"string","info":"Request","script":"01 Registration verification unit",
+"data":""},
+{"name":"Verifier","kind":"string","info":"Verifier","script":"01 Registration verification unit",
+"data":""},
+{"name":"VerificationDate","kind":"string","info":"The verification date","script":"01 Registration verification unit",
+"data":""},
+{"name":"FormNumber","kind":"string","info":"Form number","script":"01 Registration verification unit",
+"data":"432-164"},
+{"name":"GosNumber","kind":"string","info":"Measurement number","script":"01 Registration verification unit",
+"data":"52147-12"},
+{"name":"VerificationConditions","kind":"table","info":"Controlled parameters#150;ND requirements#100;Measured values#100;","script":"01 Registration verification unit",
+"data":"Temperature; 20°C; ;\r
+Humidity; 60%; ;\r
+Pressure; 100kPa; ;\r
+"},
+{"name":"VerificationTools","kind":"table","info":"Name, type, serial number#350;Metrological characteristics#400;","script":"01 Registration verification unit",
+"data":"Fluke 5522A Multifunctional Calibrator Serial ¹2182904; U=(34mV-1000V), Error±(0,0012-0,005)%, 2nd category\nI=(24uA-10A), Error±(0,011-0,1)%, 1 category\nU~(25mV-1000V), 10Hz-500kHz, Error±(0,017-1)% 2nd category\nI~=(2uA-10A), 20Hz-20kHz, Error±(0,046-3,02)%, 2nd category\nR=(0,50[Ohm]-50[Ohm]), (110M[Ohm]-1100M[Ohm]), Error ±(0,33-2)%, 3nd category;\r
+Universal voltmeter calibrator H4-12 Serial ¹005211; U=(0,001V-1000V), Error±(0,000315 – 0,0011)%  2-nd category\nU~=(0.75mV-1000V), 10Hz-50kHz, Error±(0,003 – 0,23)%, 2-nd category\nI=(70nA-30A), Error±(0,00275 – 0,05)%, 1 category\nI~=(70nA-20A), 0,1Hz-10kHz, Error±(0,0165 – 0,55)%, 2-nd category;\r
+"},
+{"name":"TYPE_SETTING_FLUKE5520A","kind":"string","info":"Device setting type","script":"02 Initialization devices",
+"data":"Automatic"},
+{"name":"TYPE_SETTING_AGILENT34401A","kind":"string","info":"Device setting type","script":"02 Initialization devices",
+"data":"Automatic"},
+{"name":"VDC","kind":"table","info":"Range#100;Point#100;Result#100;Accuracy#100;Permissible error#100;Conclusion#100;","script":"03 Verification Ag34401A by Fl5520A Demo",
+"data":"100m;100,0000m;100,0000m;0,0000m;8,5u;OK;\r
+100m;-100,0000m;-100,0000m;0,0000m;8,5u;OK;\r
+1;1,000000;1,000000;0,000000;47u;OK;\r
+1;-1,000000;-1,000000;0,000000;47u;OK;\r
+10;10,00000;10,00000;0,00000;400u;OK;\r
+10;-10,00000;-10,00000;0,00000;400u;OK;\r
+100;100,0000;100,0000;0,0000;5,1m;OK;\r
+100;-100,0000;-100,0000;0,0000;5,1m;OK;\r
+1000;1000,000;1000,000;0,000;55m;OK;\r
+1000;-1000,000;-1000,000;0,000;55m;OK;\r
+"},
+{"name":"VAC","kind":"table","info":"Range#100;Point#100;Frequency#100;Result#100;Accuracy#100;Permissible error#100;Conclusion#100;","script":"03 Verification Ag34401A by Fl5520A Demo",
+"data":"100m;10,0000m;1k;10,0000m;0,0000m;46u;OK;\r
+100m;100,0000m;1k;100,0000m;0,0000m;100u;OK;\r
+100m;100,0000m;50k;100,0000m;0,0000m;170u;OK;\r
+1;1,000000;1k;1,000000;0,000000;900u;OK;\r
+1;1,000000;50k;1,000000;0,000000;1,7m;OK;\r
+10;10,00000;0,01k;10,00000;0,00000;9m;OK;\r
+10;10,00000;1k;10,00000;0,00000;9m;OK;\r
+10;10,00000;50k;10,00000;0,00000;17m;OK;\r
+100;100,0000;1k;100,0000;0,0000;90m;OK;\r
+100;100,0000;50k;100,0000;0,0000;170m;OK;\r
+750;750,000;1k;750,000;0,000;675m;OK;\r
+750;750,000;5k;750,000;0,000;1275m;OK;\r
+"},
+{"name":"RES","kind":"table","info":"Range#100;Point#100;Result#100;Accuracy#100;Permissible error#100;Conclusion#100;","script":"03 Verification Ag34401A by Fl5520A Demo",
+"data":"100;100,000;100,000;0,000;14m;OK;\r
+1k;1,00000k;1,00000k;0,00000k;110m;OK;\r
+10k;10,0000k;10,0000k;0,0000k;1,1;OK;\r
+100k;100,000k;100,000k;0,000k;11;OK;\r
+1M;1,00000M;1,00000M;0,00000M;110;OK;\r
+10M;10,0000M;10,0000M;0,0000M;4,1k;OK;\r
+100M;100,000M;100,000M;0,000M;810k;OK;\r
+"},
+{"name":"IDC","kind":"table","info":"Range#100;Point#100;Result#100;Accuracy#100;Permissible error#100;Conclusion#100;","script":"03 Verification Ag34401A by Fl5520A Demo",
+"data":"10m;10,00000m;10,00000m;0,00000m;7u;OK;\r
+100m;100,0000m;100,0000m;0,0000m;55u;OK;\r
+1;1,00000;1,00000;0,00000;1,1m;OK;\r
+3;2,00000;2,00000;0,00000;3,0m;OK;\r
+"},
+{"name":"IAC","kind":"table","info":"Range#100;Point#100;Frequency#100;Result#100;Accuracy#100;Permissible error#100;Conclusion#100;","script":"03 Verification Ag34401A by Fl5520A Demo",
+"data":"1;1,00000;1k;1,00000;0,00000;1,4m;OK;\r
+3;0,30000;1k;0,30000;0,00000;4,8m;OK;\r
+"}
+
+],
+"tree":
+[
+{"line":"0","name":"Verification FLUKE5520A Agilent34401A","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"01 Registration verification unit","type":"script","project":"Verification FLUKE5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"2","name":"Equipment registration$Reg","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"01 Registration verification unit","region":"","status":"passed","pcode":"5","pcount":"2"},
+{"line":"3","name":"02 Initialization devices","type":"script","project":"Verification FLUKE5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"4","name":"Initialization AGILENT34401$Init","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"02 Initialization devices","region":"","status":"passed","pcode":"5","pcount":"2"},
+{"line":"5","name":"Initialization FLUKE5520A$Init","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"02 Initialization devices","region":"","status":"passed","pcode":"5","pcount":"2"},
+{"line":"6","name":"03 Verification Ag34401A by Fl5520A Demo","type":"script","project":"Verification FLUKE5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"7","name":"Determining the absolute error of AC voltage measurement$VAC","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"8","name":"Meas 1$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"9","name":"Meas 2$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"10","name":"Meas 3$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"11","name":"Meas 4$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"12","name":"Meas 5$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"13","name":"Meas 6$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"14","name":"Meas 7$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"15","name":"Meas 8$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"16","name":"Meas 9$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"17","name":"Meas 10$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"18","name":"Meas 11$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"19","name":"Meas 12$VAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of AC voltage measurement$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"20","name":"Determining the absolute error of DC voltage measurement$VDC","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"21","name":"Meas 1$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"22","name":"Meas 2$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"23","name":"Meas 3$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"24","name":"Meas 4$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"25","name":"Meas 5$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"26","name":"Meas 6$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"27","name":"Meas 7$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"28","name":"Meas 8$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"29","name":"Meas 9$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"30","name":"Meas 10$VDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determining the absolute error of DC voltage measurement$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"31","name":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"32","name":"Meas 1$R4","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","status":"passed","pcode":"5","pcount":"8"},
+{"line":"33","name":"Meas 2$R4","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","status":"passed","pcode":"5","pcount":"8"},
+{"line":"34","name":"Meas 3$R4","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","status":"passed","pcode":"5","pcount":"8"},
+{"line":"35","name":"Meas 4$R4","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the measurement error of the resistance of a 4-wire circuit$R4","status":"passed","pcode":"5","pcount":"8"},
+{"line":"36","name":"Determination of the measurement error of the resistance of a 2-wire circuit$R2","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"37","name":"Meas 1$R2","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the measurement error of the resistance of a 2-wire circuit$R2","status":"passed","pcode":"5","pcount":"8"},
+{"line":"38","name":"Meas 2$R2","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the measurement error of the resistance of a 2-wire circuit$R2","status":"passed","pcode":"5","pcount":"8"},
+{"line":"39","name":"Meas 3$R2","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the measurement error of the resistance of a 2-wire circuit$R2","status":"passed","pcode":"5","pcount":"8"},
+{"line":"40","name":"Determination of the absolute error of measuring the strength of alternating current$IAC","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"41","name":"Meas 1$IAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the absolute error of measuring the strength of alternating current$IAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"42","name":"Meas 2$IAC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the absolute error of measuring the strength of alternating current$IAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"43","name":"Determination of the absolute error in the measurement of direct current$IDC","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"44","name":"Meas 1$IDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the absolute error in the measurement of direct current$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"45","name":"Meas 2$IDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the absolute error in the measurement of direct current$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"46","name":"Meas 3$IDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the absolute error in the measurement of direct current$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"47","name":"Meas 4$IDC","type":"hesh","project":"Verification FLUKE5520A Agilent34401A","script":"03 Verification Ag34401A by Fl5520A Demo","region":"Determination of the absolute error in the measurement of direct current$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"48","name":"04 Save word report","type":"script","project":"Verification FLUKE5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"49","name":"Save word report$Word","type":"region","project":"Verification FLUKE5520A Agilent34401A","script":"04 Save word report","region":"","status":"passed","pcode":"5","pcount":"2"}
+]
+}

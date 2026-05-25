@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Router Admin Panel</h1>
+
+        <!-- Login Section -->
+        <div id="login-section">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" value="admin">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password">
+            </div>
+            <button id="login-btn">Login</button>
+            <p id="login-error" class="error-message"></p>
+        </div>
+
+        <!-- Main Content Section -->
+        <div id="main-content" class="hidden">
+            <h2>Dashboard</h2>
+            
+            <!-- WiFi Settings -->
+            <div class="settings-group">
+                <h3>WiFi Settings</h3>
+                <div class="form-group">
+                    <label for="ssid">Network Name (SSID):</label>
+                    <input type="text" id="ssid" value="MyHomeWiFi">
+                </div>
+                <div class="form-group">
+                    <label for="power-level">Power Level:</label>
+                    <select id="power-level">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="channel">Channel:</label>
+                    <select id="channel">
+                        <option value="auto">Auto</option>
+                        <option value="1">1</option>
+                        <option value="6">6</option>
+                        <option value="11">11</option>
+                    </select>
+                </div>
+                <button id="save-wifi-btn">Save WiFi Settings</button>
+            </div>
+
+            <!-- Status Section -->
+            <div class="status-group">
+                <h3>Live Status</h3>
+                <div class="form-group-read-only">
+                    <label>Transmit Power:</label>
+                    <span id="transmit-power">10 dBm</span>
+                </div>
+                <div class="form-group-read-only">
+                    <label>Effective Rate:</label>
+                    <span id="effective-rate">54 Mbps</span>
+                </div>
+            </div>
+
+            <button id="reboot-btn">Reboot Router</button>
+
+            <!-- Test Modal Buttons -->
+            <div class="settings-group">
+                <h3>Test Actions</h3>
+                <div class="action-buttons">
+                    <a href="#" onclick="editProfile('Radio', 'z_24_ax','aplisteditform','approfile1');">
+                        <img src="data/settings.png" class="ez_img" align="absmiddle" title="Edit Profile 1">
+                    </a>
+                    <a href="#" onclick="editProfile('Radio', 'z_5_ax','aplisteditform','approfile2');">
+                        <img src="data/settings.png" class="ez_img" align="absmiddle" title="Edit Profile 2">
+                    </a>
+                </div>
+            </div>
+
+            <div class="log-area">
+                <h3>Log</h3>
+                <pre id="log-output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Modal Structure -->
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="generic-modal" class="modal hidden">
+        <div class="modal-header">
+            <h3 id="modal-title">Edit Profile</h3>
+        </div>
+        <div class="modal-body">
+            <p>Editing item: <strong id="modal-param-1"></strong></p>
+            <p>Unique ID: <strong id="modal-param-2"></strong></p>
+            <p>Form: <strong id="modal-param-3"></strong></p>
+            <p>Profile: <strong id="modal-param-4"></strong></p>
+        </div>
+        <div class="modal-footer">
+            <button id="modal-ok-btn">OK</button>
+            <button id="modal-cancel-btn" class="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+"name":"Report function project",
+"autosave":"true",
+"scripts":[
+{"file":"1 Greeting.py","necessary":"true"},
+{"file":"2 Report save.py","necessary":"false"},
+{"file":"3 Report clear.py","necessary":"false"},
+{"file":"4 Report delete.py","necessary":"false"},
+{"file":"5 Farewell.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"}
+],
+"templates":[
+{"file":"Report.docx"}
+]
+}

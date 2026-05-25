@@ -1,0 +1,120 @@
+{
+"scripts":
+[
+{"name":"01 Welcome","smark":"passed"},
+{"name":"02 Measurements","smark":"passed"},
+{"name":"03 Measurements 2","smark":"passed"},
+{"name":"04 Measurements Minimize","smark":"passed"},
+{"name":"05 Save Report","smark":"passed"}
+],
+"report":
+[
+{"name":"ScriptExecutionTime","kind":"table","info":"Название скрипта#350;Start time#100;Stop time#100;Время исполнения#150","script":"05 Save Report",
+"data":"01 Welcome.py;01:25:37;01:25:39;0:00:02;\r
+02 Measurements.py;01:25:39;01:26:10;0:00:30;\r
+03 Measurements 2.py;01:26:11;01:26:31;0:00:19;\r
+04 Measurements Minimize.py;01:26:31;01:26:43;0:00:12;\r
+05 Save Report.py;01:26:44;01:26:49;0:00:05;\r
+"},
+{"name":"WiFi Performance - Batch 1","kind":"table","info":"Point ID#100;Power Level#100;Channel#100;Transmit Power#100;Effective Rate#100","script":"02 Measurements",
+"data":"1;low;auto;10 dBm;54 Mbps;\r
+2;low;1;10 dBm;49 Mbps;\r
+3;medium;6;15 dBm;79 Mbps;\r
+4;medium;11;15 dBm;65 Mbps;\r
+5;high;auto;20 dBm;150 Mbps;\r
+6;high;1;20 dBm;135 Mbps;\r
+7;high;6;20 dBm;165 Mbps;\r
+8;high;11;20 dBm;135 Mbps;\r
+9;medium;auto;15 dBm;72 Mbps;\r
+10;low;6;10 dBm;59 Mbps;\r
+"},
+{"name":"WiFi Performance - Additional","kind":"table","info":"Point ID#100;Power Level#100;Channel#100;Transmit Power#100;Effective Rate#100","script":"02 Measurements",
+"data":"11;low;1;10 dBm;49 Mbps;\r
+12;low;6;10 dBm;59 Mbps;\r
+13;low;11;10 dBm;49 Mbps;\r
+14;medium;auto;15 dBm;72 Mbps;\r
+15;medium;1;15 dBm;65 Mbps;\r
+16;medium;6;15 dBm;79 Mbps;\r
+17;high;auto;20 dBm;150 Mbps;\r
+18;high;1;20 dBm;135 Mbps;\r
+19;high;6;20 dBm;165 Mbps;\r
+20;high;11;20 dBm;135 Mbps;\r
+"},
+{"name":"WiFi Performance - Batch 2","kind":"table","info":"Point ID#100;Power Level#100;Channel#100;Transmit Power#100;Effective Rate#100","script":"03 Measurements 2",
+"data":"21;low;auto;10 dBm;54 Mbps;\r
+22;low;1;10 dBm;49 Mbps;\r
+23;low;6;10 dBm;59 Mbps;\r
+24;low;11;10 dBm;49 Mbps;\r
+25;medium;auto;15 dBm;72 Mbps;\r
+26;medium;1;15 dBm;65 Mbps;\r
+27;medium;6;15 dBm;79 Mbps;\r
+28;high;auto;20 dBm;150 Mbps;\r
+29;high;1;20 dBm;135 Mbps;\r
+30;high;11;20 dBm;135 Mbps;\r
+"},
+{"name":"WiFi Performance - Batch 3","kind":"table","info":"Point ID#100;Power Level#100;Channel#100;Transmit Power#100;Effective Rate#100","script":"04 Measurements Minimize",
+"data":"31;low;auto;10 dBm;54 Mbps;\r
+32;low;1;10 dBm;49 Mbps;\r
+33;medium;6;15 dBm;79 Mbps;\r
+34;high;11;20 dBm;135 Mbps;\r
+35;high;auto;20 dBm;150 Mbps;\r
+"}
+
+],
+"tree":
+[
+{"line":"0","name":"Wi-Fi Router Control","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"01 Welcome","type":"script","project":"Wi-Fi Router Control","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"2","name":"02 Measurements","type":"script","project":"Wi-Fi Router Control","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"3","name":"Step 1: Initialize and Login$INIT","type":"region","project":"Wi-Fi Router Control","script":"02 Measurements","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"4","name":"Step 2: Perform Measurements$MEASURE","type":"region","project":"Wi-Fi Router Control","script":"02 Measurements","region":"","status":"empty","pcode":"0","pcount":"4"},
+{"line":"5","name":"Meas 1$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"6","name":"Meas 2$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"7","name":"Meas 3$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"8","name":"Meas 4$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"9","name":"Meas 5$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"10","name":"Meas 6$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"11","name":"Meas 7$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"12","name":"Meas 8$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"13","name":"Meas 9$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"14","name":"Meas 10$MEASURE","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 2: Perform Measurements$MEASURE","status":"passed","pcode":"5","pcount":"4"},
+{"line":"15","name":"Step 3: Additional Measurements$MEASURE2","type":"region","project":"Wi-Fi Router Control","script":"02 Measurements","region":"","status":"empty","pcode":"0","pcount":"4"},
+{"line":"16","name":"Meas 11$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"17","name":"Meas 12$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"18","name":"Meas 13$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"19","name":"Meas 14$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"20","name":"Meas 15$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"21","name":"Meas 16$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"22","name":"Meas 17$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"23","name":"Meas 18$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"24","name":"Meas 19$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"25","name":"Meas 20$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"02 Measurements","region":"Step 3: Additional Measurements$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"26","name":"Step 4: Close Browser$CLOSE1","type":"region","project":"Wi-Fi Router Control","script":"02 Measurements","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"27","name":"03 Measurements 2","type":"script","project":"Wi-Fi Router Control","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"28","name":"Step 1: Initialize and Login (Batch 2)$INIT2","type":"region","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"29","name":"Hide Browser (Batch 2)$HIDE2","type":"region","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"30","name":"Step 2: Perform Measurements (Batch 2)$MEASURE2","type":"region","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"","status":"empty","pcode":"0","pcount":"4"},
+{"line":"31","name":"Meas 21$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"32","name":"Meas 22$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"33","name":"Meas 23$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"34","name":"Meas 24$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"35","name":"Meas 25$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"36","name":"Meas 26$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"37","name":"Meas 27$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"38","name":"Meas 28$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"39","name":"Meas 29$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"40","name":"Meas 30$MEASURE2","type":"hesh","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"Step 2: Perform Measurements (Batch 2)$MEASURE2","status":"passed","pcode":"5","pcount":"4"},
+{"line":"41","name":"Step 3: Close Browser (Batch 2)$CLOSE2","type":"region","project":"Wi-Fi Router Control","script":"03 Measurements 2","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"42","name":"04 Measurements Minimize","type":"script","project":"Wi-Fi Router Control","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"43","name":"Step 1: Initialize and Login (Batch 3)$INIT3","type":"region","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"44","name":"Minimize Browser (Batch 3)$MIN3","type":"region","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"45","name":"Step 2: Perform Measurements (Batch 3)$MEASURE3","type":"region","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"","status":"empty","pcode":"0","pcount":"4"},
+{"line":"46","name":"Meas 31$MEASURE3","type":"hesh","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"Step 2: Perform Measurements (Batch 3)$MEASURE3","status":"passed","pcode":"5","pcount":"4"},
+{"line":"47","name":"Meas 32$MEASURE3","type":"hesh","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"Step 2: Perform Measurements (Batch 3)$MEASURE3","status":"passed","pcode":"5","pcount":"4"},
+{"line":"48","name":"Meas 33$MEASURE3","type":"hesh","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"Step 2: Perform Measurements (Batch 3)$MEASURE3","status":"passed","pcode":"5","pcount":"4"},
+{"line":"49","name":"Meas 34$MEASURE3","type":"hesh","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"Step 2: Perform Measurements (Batch 3)$MEASURE3","status":"passed","pcode":"5","pcount":"4"},
+{"line":"50","name":"Meas 35$MEASURE3","type":"hesh","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"Step 2: Perform Measurements (Batch 3)$MEASURE3","status":"passed","pcode":"5","pcount":"4"},
+{"line":"51","name":"Step 3: Close Browser (Batch 3)$CLOSE3","type":"region","project":"Wi-Fi Router Control","script":"04 Measurements Minimize","region":"","status":"empty","pcode":"0","pcount":"2"},
+{"line":"52","name":"05 Save Report","type":"script","project":"Wi-Fi Router Control","script":"","region":"","status":"empty","pcode":"0","pcount":"1"}
+]
+}

@@ -1,0 +1,20 @@
+{
+"name":"Wi-Fi Router Control",
+"autosave":"true",
+"scripts":[
+{"file":"01 Welcome.py","necessary":"true"},
+{"file":"02 Measurements.py","necessary":"true"},
+{"file":"03 Measurements 2.py","necessary":"true"},
+{"file":"04 Measurements Minimize.py","necessary":"true"},
+{"file":"05 Save Report.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"},
+{"file":"MWEB.py"},
+{"file":"WebActions.py"}
+],
+"templates":[
+{"file":"Wi-Fi Report Word.docx"}
+]
+}

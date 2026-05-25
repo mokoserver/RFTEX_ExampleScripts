@@ -1,0 +1,19 @@
+{
+"name":"CTB",
+"autosave":"true",
+"scripts":[
+{"file":"1 Начало.py","necessary":"false"},
+{"file":"2 Управление DO.py","necessary":"false"},
+{"file":"3 Управление DI.py","necessary":"false"},
+{"file":"4 Съем показаний с ELait3.py","necessary":"false"},
+{"file":"5 Управление SI8.py","necessary":"false"},
+{"file":"6 Формирование протокола.py","necessary":"false"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MTLG.py"}
+],
+"templates":[
+{"file":"Отчёт.docx"}
+]
+}

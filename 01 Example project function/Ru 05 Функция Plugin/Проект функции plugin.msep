@@ -1,0 +1,20 @@
+{
+"name":"Проект функции plugin",
+"autosave":"true",
+"scripts":[
+{"file":"1 Приветствие.py","necessary":"true"},
+{"file":"2 Функция Plugin init.py","necessary":"false"},
+{"file":"3 Функция Plugin set.py","necessary":"false"},
+{"file":"4 Функция Plugin get.py","necessary":"false"},
+{"file":"5 Функция Plugin close.py","necessary":"false"},
+{"file":"6 Прощание.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"},
+{"file":"MGPH.py"}
+],
+"templates":[
+{"file":"Отчет.docx"}
+]
+}

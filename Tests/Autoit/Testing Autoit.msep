@@ -1,0 +1,13 @@
+{
+"name":"Testing Autoit",
+"autosave":"true",
+"scripts":[
+{"file":"Testing Autoit.py","necessary":"false"}
+],
+"libraries":[
+{"file":"RFSE.py"}
+],
+"templates":[
+
+]
+}

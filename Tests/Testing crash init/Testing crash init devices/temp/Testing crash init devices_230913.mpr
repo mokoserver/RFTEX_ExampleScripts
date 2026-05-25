@@ -1,0 +1,15 @@
+{
+"scripts":
+[
+{"name":"Test","smark":"done"}
+],
+"report":
+[
+
+],
+"tree":
+[
+{"line":"0","name":"Testing crash init devices","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"Test","type":"script","project":"Testing crash init devices","script":"","region":"","status":"empty","pcode":"0","pcount":"1"}
+]
+}

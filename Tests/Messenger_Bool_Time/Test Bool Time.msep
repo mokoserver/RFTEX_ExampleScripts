@@ -1,0 +1,13 @@
+{
+"name":"Test Bool Time",
+"autosave":"true",
+"scripts":[
+{"file":"Messenger_Bool_Time.py","necessary":"false"}
+],
+"libraries":[
+{"file":"RFSE.py"}
+],
+"templates":[
+
+]
+}

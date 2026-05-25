@@ -1,0 +1,13 @@
+{
+"name":"WordReport",
+"autosave":"true",
+"scripts":[
+{"file":"Test WordReport.py","necessary":"false"}
+],
+"libraries":[
+{"file":"RFSE.py"}
+],
+"templates":[
+{"file":"Report.docx"}
+]
+}

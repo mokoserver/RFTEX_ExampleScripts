@@ -1,0 +1,15 @@
+{
+"name":"Path function project",
+"autosave":"true",
+"scripts":[
+{"file":"1 Greeting.py","necessary":"true"},
+{"file":"2 Farewell.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"}
+],
+"templates":[
+{"file":"Report.docx"}
+]
+}

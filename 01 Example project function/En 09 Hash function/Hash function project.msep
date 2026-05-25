@@ -1,0 +1,17 @@
+{
+"name":"Hesh function project",
+"autosave":"true",
+"scripts":[
+{"file":"1 first script.py","necessary":"false"},
+{"file":"2 second script.py","necessary":"false"},
+{"file":"3 third script.py","necessary":"false"},
+{"file":"4 fourth script.py","necessary":"false"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"}
+],
+"templates":[
+{"file":"Report.docx"}
+]
+}

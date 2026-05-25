@@ -1,0 +1,17 @@
+{
+"name":"Проект функции Hash",
+"autosave":"true",
+"scripts":[
+{"file":"1 Первый скрипт.py","necessary":"false"},
+{"file":"2 Второй скрипт.py","necessary":"false"},
+{"file":"3 Третий скрипт.py","necessary":"false"},
+{"file":"4 Четвертый скрипт.py","necessary":"false"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"}
+],
+"templates":[
+{"file":"Отчет.docx"}
+]
+}

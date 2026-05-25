@@ -1,0 +1,10 @@
+1;low;auto;10 dBm;54 Mbps;
+2;low;1;10 dBm;49 Mbps;
+3;medium;6;15 dBm;79 Mbps;
+4;medium;11;15 dBm;65 Mbps;
+5;high;auto;20 dBm;150 Mbps;
+6;high;1;20 dBm;135 Mbps;
+7;high;6;20 dBm;165 Mbps;
+8;high;11;20 dBm;135 Mbps;
+9;medium;auto;15 dBm;72 Mbps;
+10;low;6;10 dBm;59 Mbps;

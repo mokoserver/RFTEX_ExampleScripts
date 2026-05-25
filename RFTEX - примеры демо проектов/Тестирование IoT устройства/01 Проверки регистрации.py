@@ -8,7 +8,7 @@ RFSE.Stage("*************** Проверка регистрации ************
 RFSE.Stage("*********************************************************")
 RFSE.Stage(" ")
 
-info = "RFSE_test"
+info = "RFTEX_test"
 #region Регистрация оборудования$Reg
 MOSC.hashStatus("$Reg")
 RFSE.Program('tree', 'set', 'select = Регистрация оборудования$Reg')

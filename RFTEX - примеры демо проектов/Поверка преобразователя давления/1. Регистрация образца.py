@@ -6,7 +6,7 @@ from MOSC import Utility_to_Report
 #EndRegion 1.1 Этапы регистрации:
 
 
-UN = 'RFSE_pressure_gauge'  # Utility Name
+UN = 'RFTEX_pressure_gauge'  # Utility Name
 reports = ['AccuracyClass',  # класс точности
            'UnitOfMeasure',  # единицы измерения
            'ScaleMax',  # Предельное значение давления на шкале прибора

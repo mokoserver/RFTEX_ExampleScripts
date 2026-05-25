@@ -3,12 +3,12 @@ import RFSE
 import MOSC
 
 RFSE.Stage("*********************************************************")
-RFSE.Stage("************ Measurement Fluke5520 script ***************")
+RFSE.Stage("************ Скрипт измерений Fluke5520 ***************")
 RFSE.Stage("*********************************************************")
 RFSE.Stage(" ")
 
 RFSE.Stage("*********************************************************")
-RFSE.Stage('**************** Null flags of system ****************')
+RFSE.Stage('**************** Обнуление флагов системы ****************')
 RFSE.Stage("*********************************************************")
 RFSE.Stage(" ")
 
@@ -165,9 +165,9 @@ def IAC(
         Poverka.IAC_Measurement(range=range, verified=verified, error=error, frequency=frequency)
 
 
-#region Determining the absolute error of AC voltage measurement$VAC
-#description: range of \nmeasurement,\nV;verified point, V;frequency, Hz;permissible \nmeasurement \nerror, V;delay time \nbefore \nmeasurement, s;remeasure,\nTrue or False;number of \nremeasurements
-RFSE.Program('tree', 'set', 'select = Determining the absolute error of AC voltage measurement$VAC')
+#region Определение абсолютной погрешности измерения напряжения переменного тока$VAC
+#description: диапазон \nизмерения,\nВ;поверяемая точка, В;частота, Гц;допускаемая \nпогрешность \nизмерения, В;время задержки \nперед \nизмерением, с;переизмерять,\nДа или Нет;количество \nпереизмерений
+RFSE.Program('tree', 'set', 'select = Определение абсолютной погрешности измерения напряжения переменного тока$VAC')
 
 VAC(range="100m", verified="10,0000m",  frequency="1k",    error="46u",   time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 1$VAC')   #hash Meas 1$VAC:   100m  ;10,0000m   ;1k    ;46u   ;3.000000  ;True  ;3
 VAC(range="100m", verified="100,0000m", frequency="1k",    error="100u",  time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 2$VAC')   #hash Meas 2$VAC:   100m  ;100,0000m  ;1k    ;100u  ;3.000000  ;True  ;3
@@ -183,11 +183,11 @@ VAC(range="750",  verified="750,000",   frequency="1k",    error="675m",  time_d
 VAC(range="750",  verified="750,000",   frequency="5k",    error="1275m", time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 12$VAC')  #hash Meas 12$VAC:  750   ;750,000    ;5k    ;1275m ;3.000000  ;True  ;3
 
 Poverka.MeasurementStopCommand()
-#endregion Determining the absolute error of AC voltage measurement$VAC
+#endregion Определение абсолютной погрешности измерения напряжения переменного тока$VAC
 
-#region Determining the absolute error of DC voltage measurement$VDC
-#description: range of \nmeasurement,\nV;verified point, V;frequency, Hz;permissible \nmeasurement \nerror, V;delay time \nbefore \nmeasurement, s;remeasure,\nTrue or False;number of \nremeasurements;
-RFSE.Program('tree', 'set', 'select = Determining the absolute error of DC voltage measurement$VDC')
+#region Определение абсолютной погрешности измерения напряжения постоянного тока$VDC
+#description: диапазон \nизмерения,\nВ;поверяемая точка, В;частота, Гц;допускаемая \nпогрешность \nизмерения, В;время задержки \nперед \nизмерением, с;переизмерять,\nДа или Нет;количество \nпереизмерений;
+RFSE.Program('tree', 'set', 'select = Определение абсолютной погрешности измерения напряжения постоянного тока$VDC')
 
 VDC(range='100m', verified='100,0000m',  error='8,5u', time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 1$VDC')   #hash Meas 1$VDC:  100m   ;100,0000m   ;-   ;8,5u  ;3.000000  ;True  ;3
 VDC(range='100m', verified='-100,0000m', error='8,5u', time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 2$VDC')   #hash Meas 2$VDC:  100m   ;-100,0000m  ;-   ;8,5u  ;3.000000  ;True  ;3
@@ -201,11 +201,11 @@ VDC(range='1000', verified='1000,000',   error='55m',  time_delay=3.0000, remeas
 VDC(range='1000', verified='-1000,000',  error='55m',  time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 10$VDC')  #hash Meas 10$VDC: 1000   ;-1000,000   ;-   ;55m   ;3.000000  ;True  ;3
 
 Poverka.MeasurementStopCommand()
-#endregion Determining the absolute error of DC voltage measurement$VDC
+#endregion Определение абсолютной погрешности измерения напряжения постоянного тока$VDC
 
-#region Determination of the measurement error of the resistance of a 4-wire circuit$R4
-#description: range of \nmeasurement,\nOm;verified \npoint, Om;frequency, Hz;permissible \nmeasurement \nerror, Om;delay time \nbefore \nmeasurement, s;remeasure,\nTrue or False;number of \nremeasurements;
-RFSE.Program('tree', 'set', 'select = Determination of the measurement error of the resistance of a 4-wire circuit$R4')
+#region Определение погрешности измерения сопротивления 4-х проводной схемы$R4
+#description: диапазон \nизмерения,\nОм;поверяемая \nточка, Ом;частота, Гц;допускаемая \nпогрешность \nизмерения, Ом;время задержки \nперед \nизмерением, с;переизмерять,\nДа или Нет;количество \nпереизмерений;
+RFSE.Program('tree', 'set', 'select = Определение погрешности измерения сопротивления 4-х проводной схемы$R4')
 
 R4(range="100",  verified="100,000",   error="14m",  time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 1$R4')  #hash Meas 1$R4:  100    ;100,000    ;-   ;14m  ;3.000000  ;True  ;3
 R4(range="1k",   verified="1,00000k",  error="110m", time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 2$R4')  #hash Meas 2$R4:  1k     ;1,00000K   ;-   ;110m ;3.000000  ;True  ;3
@@ -213,33 +213,33 @@ R4(range="10k",  verified="10,0000k",  error="1,1",  time_delay=3.0000, remeasur
 R4(range="100k", verified="100,000k",  error="11",   time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 4$R4')  #hash Meas 4$R4:  100k   ;100,000K   ;-   ;11   ;3.000000  ;True  ;3
 
 Poverka.MeasurementStopCommand()
-#endregion Determination of the measurement error of the resistance of a 4-wire circuit$R4
+#endregion Определение погрешности измерения сопротивления 4-х проводной схемы$R4
 
-#region Determination of the measurement error of the resistance of a 2-wire circuit$R2
-#description: range of \nmeasurement,\nOm;verified \npoint, Om;frequency, Hz;permissible \nmeasurement \nerror, Om;delay time \nbefore \nmeasurement, s;remeasure,\nTrue or False;number of \nremeasurements;
-RFSE.Program('tree', 'set', 'select = Determination of the measurement error of the resistance of a 2-wire circuit$R2')
+#region Определение погрешности измерения сопротивления 2-х проводной схемы$R2
+#description: диапазон \nизмерения,\nОм;поверяемая \nточка, Ом;частота, Гц;допускаемая \nпогрешность \nизмерения, Ом;время задержки \nперед \nизмерением, с;переизмерять,\nДа или Нет;количество \nпереизмерений;
+RFSE.Program('tree', 'set', 'select = Определение погрешности измерения сопротивления 2-х проводной схемы$R2')
 
 R2(range="1M",    verified="1,00000M", error="110",  time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 1$R2')  #hash Meas 1$R2:  1M     ;1,00000M  ;-   ;110   ;3.000000  ;True  ;3
 R2(range="10M",   verified="10,0000M", error="4,1k", time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 2$R2')  #hash Meas 2$R2:  10M    ;10,0000M  ;-   ;4,1k  ;3.000000  ;True  ;3
 R2(range="100M",  verified="100,000M", error="810k", time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 3$R2')  #hash Meas 3$R2:  100M   ;100,000M  ;-   ;810k  ;3.000000  ;True  ;3
 
 Poverka.MeasurementStopCommand()
-#endregion Determination of the measurement error of the resistance of a 2-wire circuit$R2
+#endregion Определение погрешности измерения сопротивления 2-х проводной схемы$R2
 
-#region Determination of the absolute error of measuring the strength of alternating current$IAC
-#description: range of \nmeasurement,\nA;verified point, A;frequency, Hz;permissible \nmeasurement \nerror, A;delay time \nbefore \nmeasurement, s;remeasure,\nTrue or False;number of \nremeasurements;
-RFSE.Program('tree', 'set', 'select = Determination of the absolute error of measuring the strength of alternating current$IAC')
+#region Определение абсолютной погрешности измерения силы переменного тока$IAC
+#description: диапазон \nизмерения,\nА;поверяемая точка, А;частота, Гц;допускаемая \nпогрешность \nизмерения, А;время задержки \nперед \nизмерением, с;переизмерять,\nДа или Нет;количество \nпереизмерений;
+RFSE.Program('tree', 'set', 'select = Определение абсолютной погрешности измерения силы переменного тока$IAC')
 
 IAC(range="1", verified="1,00000", frequency="1k",  error="1,4m",  time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 1$IAC')  #hash Meas 1$IAC: 1 ;1,00000   ;1k  ;1,4m  ;3.000000  ;True  ;3
 IAC(range="3", verified="0,30000", frequency="1k",  error="4,8m",  time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 2$IAC')  #hash Meas 2$IAC: 3 ;0,30000   ;1k  ;4,8m  ;3.000000  ;True  ;3
 
 Poverka.MeasurementStopCommand()
-#endregion Determination of the absolute error of measuring the strength of alternating current$IAC
+#endregion Определение абсолютной погрешности измерения силы переменного тока$IAC
 
 
-#region Determination of the absolute error in the measurement of direct current$IDC
-#description: range of \nmeasurement,\nA;verified point, A;frequency, Hz;permissible \nmeasurement \nerror, A;delay time \nbefore \nmeasurement, s;remeasure,\nTrue or False;number of \nremeasurements;
-RFSE.Program('tree', 'set', 'select = Determination of the absolute error in the measurement of direct current$IDC')
+#region Определение абсолютной погрешности при измерении постоянного тока$IDC
+#description: диапазон \nизмерения,\nА;поверяемая точка, А;частота, Гц;допускаемая \nпогрешность \nизмерения, А;время задержки \nперед \nизмерением, с;переизмерять,\nДа или Нет;количество \nпереизмерений;
+RFSE.Program('tree', 'set', 'select = Определение абсолютной погрешности при измерении постоянного тока$IDC')
 
 IDC(range="10m",   verified="10,00000m",  error="7u",    time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 1$IDC')  #hash Meas 1$IDC: 10m    ;10,00000m   ;-   ;7u   ;3.000000  ;True  ;3
 IDC(range="100m",  verified="100,0000m",  error="55u",   time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 2$IDC')  #hash Meas 2$IDC: 100m   ;100,0000m   ;-   ;55u  ;3.000000  ;True  ;3
@@ -247,6 +247,6 @@ IDC(range="1",     verified="1,00000",    error="1,1m",  time_delay=3.0000, reme
 IDC(range="3",     verified="2,00000",    error="3,0m",  time_delay=3.0000, remeasurement=True, remeasurement_number=3, hash='Meas 4$IDC')  #hash Meas 4$IDC: 3      ;2,00000     ;-   ;3,0m ;3.000000  ;True  ;3
 
 Poverka.MeasurementStopCommand()
-#endregion Determination of the absolute error in the measurement of direct current$IDC
+#endregion Определение абсолютной погрешности при измерении постоянного тока$IDC
 
 RFSE.EndScript()

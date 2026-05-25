@@ -5,7 +5,7 @@ RFSE.Stage("*********************************************************")
 RFSE.Stage("********* Registration verification unit script *********")
 RFSE.Stage("*********************************************************")
 
-UtilityInfo = "RFSE_israel_info"
+UtilityInfo = "RFTEX_israel_info"
 #region Equipment registration$Reg
 MOSC.hashStatus("$Reg")
 RFSE.Program('tree', 'set', 'select = Equipment registration$Reg')

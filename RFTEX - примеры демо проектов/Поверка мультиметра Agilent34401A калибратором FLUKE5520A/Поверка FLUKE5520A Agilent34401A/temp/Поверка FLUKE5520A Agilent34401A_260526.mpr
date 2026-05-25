@@ -1,0 +1,144 @@
+{
+"scripts":
+[
+{"name":"01 Проверка регистрации модуля","smark":"passed"},
+{"name":"02 Инициализация устройств. Драйверы Fluke5000 и AgilentDMM","smark":"passed"},
+{"name":"03 Поверка Agilent34401A калибратором Fluke5520A","smark":"passed"},
+{"name":"04 Сохранение отчета в Word","smark":"passed"}
+],
+"report":
+[
+{"name":"ProtocolNumber","kind":"string","info":"Номер протокола измерений","script":"01 Проверка регистрации модуля",
+"data":""},
+{"name":"CurrentDate","kind":"string","info":"Текущая дата","script":"01 Проверка регистрации модуля",
+"data":""},
+{"name":"ModelDevice","kind":"string","info":"Модель поверяемого прибора","script":"01 Проверка регистрации модуля",
+"data":""},
+{"name":"SerialNumber","kind":"string","info":"Заводской номер прибора","script":"01 Проверка регистрации модуля",
+"data":""},
+{"name":"Owner","kind":"string","info":"Заказчик","script":"01 Проверка регистрации модуля",
+"data":""},
+{"name":"Request","kind":"string","info":"Заявка","script":"01 Проверка регистрации модуля",
+"data":""},
+{"name":"Verifier","kind":"string","info":"Поверитель","script":"01 Проверка регистрации модуля",
+"data":""},
+{"name":"VerificationDate","kind":"string","info":"Дата поверки","script":"01 Проверка регистрации модуля",
+"data":""},
+{"name":"FormNumber","kind":"string","info":"Номер формы","script":"01 Проверка регистрации модуля",
+"data":"432-164"},
+{"name":"GosNumber","kind":"string","info":"Номер госреестра","script":"01 Проверка регистрации модуля",
+"data":"52147-12"},
+{"name":"VerificationConditions","kind":"table","info":"Контролируемые параметры#150;Требования НД#100;Измеренные значения#100;","script":"01 Проверка регистрации модуля",
+"data":"Температура;20°C;;\r
+Влажность;60%;;\r
+Давление;100кПа;;\r
+"},
+{"name":"VerificationTools","kind":"table","info":"Наименование, тип, заводской номер#350;Метрологические характеристики#400;","script":"01 Проверка регистрации модуля",
+"data":"Калибратор многофункциональный Fluke 5522A Зав.№2182904;U=(34мВ-1000В), Погр.±(0,0012-0,005)%, 2 разряд\nI=(24мкА-10А), Погр.±(0,011-0,1)%, 1 разряд\nU~=(25мВ-1000В), 10Гц-500кГц, Погр.±(0,017-1)% 2 разряд\nI~=(2мкА-10А), 20Гц-20кГц, Погр.±(0,046-3,02)%, 2 разряд\nR=(0,50[Ом]-50[Ом]), (110М[Ом]-1100М[Ом]), Погр. ±(0,33-2)%, 3 разряд;\r
+Вольтметр универсальный калибратор Н4-12 Зав.№005211;U=(0,001В-1000В), Погр.±(0,000315 – 0,0011)% 2-й разряд\nU~=(0.75мВ-1000В), 10Гц-50кГц, Погр.±(0,003 – 0,23)%, 2-й разряд\nI=(70нА-30А), Погр.±(0,00275 – 0,05)%, 1 разряд\nI~=(70нА-20А), 0,1Гц-10кГц, Погр.±(0,0165 – 0,55)%, 2-й разряд;\r
+"},
+{"name":"TYPE_SETTING_FLUKE5520A","kind":"string","info":"Тип настройки прибора","script":"02 Инициализация устройств. Драйверы Fluke5000 и AgilentDMM",
+"data":"Автоматически"},
+{"name":"TYPE_SETTING_AGILENT34401A","kind":"string","info":"Тип настройки прибора","script":"02 Инициализация устройств. Драйверы Fluke5000 и AgilentDMM",
+"data":"Автоматически"},
+{"name":"VAC","kind":"table","info":"Диапазон#100;Точка#100;Частота#100;Результат#100;Точность#100;Допустимая погрешность#100;Заключение#100;","script":"03 Поверка Agilent34401A калибратором Fluke5520A",
+"data":"100m;10,0000m;1k;10,0000m;0,0000m;46u;Годен;\r
+100m;100,0000m;1k;100,0000m;0,0000m;100u;Годен;\r
+100m;100,0000m;50k;100,0000m;0,0000m;170u;Годен;\r
+1;1,000000;1k;1,000000;0,000000;900u;Годен;\r
+1;1,000000;50k;1,000000;0,000000;1,7m;Годен;\r
+10;10,00000;0,01k;10,00000;0,00000;9m;Годен;\r
+10;10,00000;1k;10,00000;0,00000;9m;Годен;\r
+10;10,00000;50k;10,00000;0,00000;17m;Годен;\r
+100;100,0000;1k;100,0000;0,0000;90m;Годен;\r
+100;100,0000;50k;100,0000;0,0000;170m;Годен;\r
+750;750,000;1k;750,000;0,000;675m;Годен;\r
+750;750,000;5k;750,000;0,000;1275m;Годен;\r
+"},
+{"name":"VDC","kind":"table","info":"Диапазон#100;Точка#100;Результат#100;Точность#100;Допустимая погрешность#100;Заключение#100;","script":"03 Поверка Agilent34401A калибратором Fluke5520A",
+"data":"100m;100,0000m;100,0000m;0,0000m;8,5u;Годен;\r
+100m;-100,0000m;-100,0000m;0,0000m;8,5u;Годен;\r
+1;1,000000;1,000000;0,000000;47u;Годен;\r
+1;-1,000000;-1,000000;0,000000;47u;Годен;\r
+10;10,00000;10,00000;0,00000;400u;Годен;\r
+10;-10,00000;-10,00000;0,00000;400u;Годен;\r
+100;100,0000;100,0000;0,0000;5,1m;Годен;\r
+100;-100,0000;-100,0000;0,0000;5,1m;Годен;\r
+1000;1000,000;1000,000;0,000;55m;Годен;\r
+1000;-1000,000;-1000,000;0,000;55m;Годен;\r
+"},
+{"name":"RES","kind":"table","info":"Диапазон#100;Точка#100;Результат#100;Точность#100;Допустимая погрешность#100;Заключение#100;","script":"03 Поверка Agilent34401A калибратором Fluke5520A",
+"data":"100;100,000;100,000;0,000;14m;Годен;\r
+1k;1,00000k;1,00000k;0,00000k;110m;Годен;\r
+10k;10,0000k;10,0000k;0,0000k;1,1;Годен;\r
+100k;100,000k;100,000k;0,000k;11;Годен;\r
+1M;1,00000M;1,00000M;0,00000M;110;Годен;\r
+10M;10,0000M;10,0000M;0,0000M;4,1k;Годен;\r
+100M;100,000M;100,000M;0,000M;810k;Годен;\r
+"},
+{"name":"IAC","kind":"table","info":"Диапазон#100;Точка#100;Частота#100;Результат#100;Точность#100;Допустимая погрешность#100;Заключение#100;","script":"03 Поверка Agilent34401A калибратором Fluke5520A",
+"data":"1;1,00000;1k;1,00000;0,00000;1,4m;Годен;\r
+3;0,30000;1k;0,30000;0,00000;4,8m;Годен;\r
+"},
+{"name":"IDC","kind":"table","info":"Диапазон#100;Точка#100;Результат#100;Точность#100;Допустимая погрешность#100;Заключение#100;","script":"03 Поверка Agilent34401A калибратором Fluke5520A",
+"data":"10m;10,00000m;10,00000m;0,00000m;7u;Годен;\r
+100m;100,0000m;100,0000m;0,0000m;55u;Годен;\r
+1;1,00000;1,00000;0,00000;1,1m;Годен;\r
+3;2,00000;2,00000;0,00000;3,0m;Годен;\r
+"}
+
+],
+"tree":
+[
+{"line":"0","name":"Поверка FLUKE5520A Agilent34401A","type":"project","project":"","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"1","name":"01 Проверка регистрации модуля","type":"script","project":"Поверка FLUKE5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"2","name":"Регистрация оборудования$Reg","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"01 Проверка регистрации модуля","region":"","status":"passed","pcode":"5","pcount":"2"},
+{"line":"3","name":"02 Инициализация устройств. Драйверы Fluke5000 и AgilentDMM","type":"script","project":"Поверка FLUKE5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"4","name":"Инициализация AGILENT34401A$Init","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"02 Инициализация устройств. Драйверы Fluke5000 и AgilentDMM","region":"","status":"passed","pcode":"5","pcount":"2"},
+{"line":"5","name":"Инициализация FLUKE5520A$Init","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"02 Инициализация устройств. Драйверы Fluke5000 и AgilentDMM","region":"","status":"passed","pcode":"5","pcount":"2"},
+{"line":"6","name":"03 Поверка Agilent34401A калибратором Fluke5520A","type":"script","project":"Поверка FLUKE5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"7","name":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"8","name":"Meas 1$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"9","name":"Meas 2$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"10","name":"Meas 3$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"11","name":"Meas 4$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"12","name":"Meas 5$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"13","name":"Meas 6$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"14","name":"Meas 7$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"15","name":"Meas 8$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"16","name":"Meas 9$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"17","name":"Meas 10$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"18","name":"Meas 11$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"19","name":"Meas 12$VAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения переменного тока$VAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"20","name":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"21","name":"Meas 1$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"22","name":"Meas 2$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"23","name":"Meas 3$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"24","name":"Meas 4$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"25","name":"Meas 5$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"26","name":"Meas 6$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"27","name":"Meas 7$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"28","name":"Meas 8$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"29","name":"Meas 9$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"30","name":"Meas 10$VDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения напряжения постоянного тока$VDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"31","name":"Определение погрешности измерения сопротивления 4-х проводной схемы$R4","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"32","name":"Meas 1$R4","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение погрешности измерения сопротивления 4-х проводной схемы$R4","status":"passed","pcode":"5","pcount":"8"},
+{"line":"33","name":"Meas 2$R4","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение погрешности измерения сопротивления 4-х проводной схемы$R4","status":"passed","pcode":"5","pcount":"8"},
+{"line":"34","name":"Meas 3$R4","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение погрешности измерения сопротивления 4-х проводной схемы$R4","status":"passed","pcode":"5","pcount":"8"},
+{"line":"35","name":"Meas 4$R4","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение погрешности измерения сопротивления 4-х проводной схемы$R4","status":"passed","pcode":"5","pcount":"8"},
+{"line":"36","name":"Определение погрешности измерения сопротивления 2-х проводной схемы$R2","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"37","name":"Meas 1$R2","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение погрешности измерения сопротивления 2-х проводной схемы$R2","status":"passed","pcode":"5","pcount":"8"},
+{"line":"38","name":"Meas 2$R2","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение погрешности измерения сопротивления 2-х проводной схемы$R2","status":"passed","pcode":"5","pcount":"8"},
+{"line":"39","name":"Meas 3$R2","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение погрешности измерения сопротивления 2-х проводной схемы$R2","status":"passed","pcode":"5","pcount":"8"},
+{"line":"40","name":"Определение абсолютной погрешности измерения силы переменного тока$IAC","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"41","name":"Meas 1$IAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения силы переменного тока$IAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"42","name":"Meas 2$IAC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности измерения силы переменного тока$IAC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"43","name":"Определение абсолютной погрешности при измерении постоянного тока$IDC","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"","status":"empty","pcode":"0","pcount":"8"},
+{"line":"44","name":"Meas 1$IDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности при измерении постоянного тока$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"45","name":"Meas 2$IDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности при измерении постоянного тока$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"46","name":"Meas 3$IDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности при измерении постоянного тока$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"47","name":"Meas 4$IDC","type":"hesh","project":"Поверка FLUKE5520A Agilent34401A","script":"03 Поверка Agilent34401A калибратором Fluke5520A","region":"Определение абсолютной погрешности при измерении постоянного тока$IDC","status":"passed","pcode":"5","pcount":"8"},
+{"line":"48","name":"04 Сохранение отчета в Word","type":"script","project":"Поверка FLUKE5520A Agilent34401A","script":"","region":"","status":"empty","pcode":"0","pcount":"1"},
+{"line":"49","name":"Сохранение отчета в Word$Word","type":"region","project":"Поверка FLUKE5520A Agilent34401A","script":"04 Сохранение отчета в Word","region":"","status":"passed","pcode":"5","pcount":"2"}
+]
+}

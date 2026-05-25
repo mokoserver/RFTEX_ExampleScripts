@@ -18,7 +18,7 @@ class ExFluke5000Agilent34401A:
 
     def MeasurementAndReport(self, range, verified, error, WireConnection, frequency=None, filter=None) -> None:
         """
-            Calculation and reporting function
+            Функция расчета и отчета
         """
         f_verified = MFRT.ConvertStringToFloat(verified)
         f_error = MFRT.ConvertStringToFloat(error)
@@ -33,22 +33,22 @@ class ExFluke5000Agilent34401A:
 #####################################################  VDC MEAS  ######################################################
 #######################################################################################################################
 
-            RFSE.Stage(f'VDC Measure -> range = {range}, verified = {verified}, error = {error}')
+            RFSE.Stage(f'Измерение VDC -> диапазон = {range}, поверяемое = {verified}, погрешность = {error}')
 
 ############################################   Agilent34401A SET RANGE   ##############################################
             if self.AutomaticAgilent34401A:
-                RFSE.Stage(f'Driver: AgilentDMM >> mode: set >> command: range = {range}', 'driver')
+                RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: range = {range}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Agilent34401A#@agilent34401a",
-                               f"Make settings:\nSet range = {range}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Agilent34401A#@agilent34401a",
+                               f"Произведите настройки:\nУстановите диапазон = {range}\nНажмите OK")
 #######################################################################################################################
 
 #############################################   Fluke5520A SET VDC   ##################################################
             if self.AutomaticFluke5520A:
-                RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: VDC = {verified}', 'driver')
+                RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: VDC = {verified}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                               f"Make settings:\nSet VDC = {verified}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                               f"Произведите настройки:\nУстановите VDC = {verified}\nНажмите OK")
 #######################################################################################################################
 
             f_result, accuracy = self.GetResultMeasurement(verified=f_verified, error=f_error)
@@ -74,24 +74,24 @@ class ExFluke5000Agilent34401A:
 ####################################################  VAC MEAS  #######################################################
 #######################################################################################################################
 
-            RFSE.Stage(f'VAC Measure -> range = {range}, verified = {verified}, filter = {filter}, '
-                       f'frequency = {frequency}, error = {error}')
+            RFSE.Stage(f'Измерение VAC -> диапазон = {range}, поверяемое = {verified}, фильтр = {filter}, '
+                       f'частота = {frequency}, погрешность = {error}')
 
 #############################################   Agilent34401A SET RANGE   #############################################
             if self.AutomaticAgilent34401A:
-                RFSE.Stage(f'DriverSet AgilentDMM >> mode: set >> command: range = {range}', 'driver')
+                RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: range = {range}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Agilent34401A#@agilent34401a",
-                               f"Make settings:\nSet range = {range}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Agilent34401A#@agilent34401a",
+                               f"Произведите настройки:\nУстановите диапазон = {range}\nНажмите OK")
 
 #######################################################################################################################
 
 #############################################   Fluke5520A SET VAC   ##################################################
             if self.AutomaticFluke5520A:
-                RFSE.Stage(f'DriverSet Fluke5000 >> mode: set >> command: VAC = {verified} {frequency}', 'driver')
+                RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: VAC = {verified} {frequency}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                               f"Make settings:\nSet VAC = {verified} {frequency}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                               f"Произведите настройки:\nУстановите VAC = {verified} {frequency}\nНажмите OK")
 #######################################################################################################################
 
             f_result, accuracy = self.GetResultMeasurement(verified=f_verified, error=f_error)
@@ -118,22 +118,22 @@ class ExFluke5000Agilent34401A:
 ####################################################  R2 MEAS  ########################################################
 #######################################################################################################################
 
-            RFSE.Stage(f'R2 Measure -> range = {range}, verified = {verified}, error = {error}')
+            RFSE.Stage(f'Измерение R2 -> диапазон = {range}, поверяемое = {verified}, погрешность = {error}')
 
 ############################################   Agilent34401A SET RANGE   ##############################################
             if self.AutomaticAgilent34401A:
-                RFSE.Stage(f'Driver: AgilentDMM >> mode: set >> command: range = {range}', 'driver')
+                RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: range = {range}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Agilent34401A#@agilent34401a",
-                               f"Make settings:\nSet range = {range}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Agilent34401A#@agilent34401a",
+                               f"Произведите настройки:\nУстановите диапазон = {range}\nНажмите OK")
 #######################################################################################################################
 
 #############################################   Fluke5520A SET R   ####################################################
             if self.AutomaticFluke5520A:
-                RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: R = {verified}', 'driver')
+                RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: R = {verified}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                               f"Make settings:\nSet R = {verified}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                               f"Произведите настройки:\nУстановите R = {verified}\nНажмите OK")
 #######################################################################################################################
 
             f_result, accuracy = self.GetResultMeasurement(verified=f_verified, error=f_error)
@@ -159,39 +159,39 @@ class ExFluke5000Agilent34401A:
 #####################################################  R4 MEAS  #######################################################
 #######################################################################################################################
 
-            RFSE.Stage(f'R4 Measure -> range = {range}, verified = {verified}, error = {error}')
+            RFSE.Stage(f'Измерение R4 -> диапазон = {range}, поверяемое = {verified}, погрешность = {error}')
             
             if self.R4FirstResult:
 ############################################   Fluke5520A SET R = 0   #################################################
                 if self.AutomaticFluke5520A:
-                    RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: R = 0', 'driver')            
+                    RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: R = 0', 'driver')            
                 else:
-                    RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                                   "Make settings:\nSet R = 0\nPress OK")
+                    RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                                   "Произведите настройки:\nУстановите R = 0\nНажмите OK")
 #######################################################################################################################
             
-                RFSE.Messenger('set', 'Make settings#@attention',
-                               'Set the resolution to 4th decimal places;\n'
-                               'Zero the multimeter if necessary;\n'
-                               'Click OK')
+                RFSE.Messenger('set', 'Произведите настройки#@attention',
+                               'Установите разрешение до 4-го знака после запятой;\n'
+                               'Обнулите мультиметр, если это необходимо;\n'
+                               'Нажмите OK')
             
                 self.R4FirstResult = False
 
 ############################################   Agilent34401A SET RANGE   ##############################################
             if self.AutomaticAgilent34401A:
-                RFSE.Stage(f'Driver: AgilentDMM >> mode: set >> command: range = {range}', 'driver')
+                RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: range = {range}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Agilent34401A#@agilent34401a",
-                               f"Make settings:\nSet range = {range}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Agilent34401A#@agilent34401a",
+                               f"Произведите настройки:\nУстановите диапазон = {range}\nНажмите OK")
 #######################################################################################################################
 
 #############################################   Fluke5520A SET R4  ###################################################
 
             if self.AutomaticFluke5520A:
-                RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: R = {verified}', 'driver')
+                RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: R = {verified}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                               f"Make settings:\nSet R = {verified}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                               f"Произведите настройки:\nУстановите R = {verified}\nНажмите OK")
 #######################################################################################################################
 
             f_result, accuracy = self.GetResultMeasurement(verified=f_verified, error=f_error)
@@ -217,23 +217,23 @@ class ExFluke5000Agilent34401A:
 #####################################################  IDC MEAS  ######################################################
 #######################################################################################################################
 
-            RFSE.Stage(f'IDC Measure -> range = {range}, verified = {verified}, error = {error}')
+            RFSE.Stage(f'Измерение IDC -> диапазон = {range}, поверяемое = {verified}, погрешность = {error}')
 
 ############################################   Agilent34401A SET RANGE   ##############################################
             if self.AutomaticAgilent34401A:
-                RFSE.Stage(f'Driver: AgilentDMM >> mode: set >> command: range = {range}', 'driver')
+                RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: range = {range}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Agilent34401A#@agilent34401a",
-                               f"Make settings:\nSet range = {range}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Agilent34401A#@agilent34401a",
+                               f"Произведите настройки:\nУстановите диапазон = {range}\nНажмите OK")
 #######################################################################################################################
 
 #############################################   Fluke5520A SET IDC   ##################################################
 
             if self.AutomaticFluke5520A:
-                RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: IDC = {verified}', 'driver')
+                RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: IDC = {verified}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                               f"Make settings:\nSet IDC = {verified}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                               f"Произведите настройки:\nУстановите IDC = {verified}\nНажмите OK")
 #######################################################################################################################
 
             f_result, accuracy = self.GetResultMeasurement(verified=f_verified, error=f_error)
@@ -259,24 +259,24 @@ class ExFluke5000Agilent34401A:
 #####################################################  IAC MEAS  ######################################################
 #######################################################################################################################
 
-            RFSE.Stage(f'IAC Measure -> range = {range}, verified = {verified}, filter = {filter}, '
-                       f'frequency = {frequency}, error = {error}')
+            RFSE.Stage(f'Измерение IAC -> диапазон = {range}, поверяемое = {verified}, фильтр = {filter}, '
+                       f'частота = {frequency}, погрешность = {error}')
 
 ############################################   Agilent34401A SET RANGE   ##############################################
             if self.AutomaticAgilent34401A:
-                RFSE.Stage(f'DriverSet AgilentDMM >> mode: set >> command: range = {range}', 'driver')
+                RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: range = {range}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Agilent34401A#@agilent34401a",
-                               f"Make settings:\nSet range = {range}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Agilent34401A#@agilent34401a",
+                               f"Произведите настройки:\nУстановите диапазон = {range}\nНажмите OK")
 #######################################################################################################################
 
 #############################################   Fluke5520A SET IAC   ##################################################
 
             if self.AutomaticFluke5520A:
-                RFSE.Stage(f'DriverSet Fluke5000 >> mode: set >> command: IAC = {verified} {frequency}', 'driver')
+                RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: IAC = {verified} {frequency}', 'driver')
             else:
-                RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                               f"Make settings:\nSet IAC = {verified} {frequency}\nPress OK")
+                RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                               f"Произведите настройки:\nУстановите IAC = {verified} {frequency}\nНажмите OK")
 #######################################################################################################################
 
             f_result, accuracy = self.GetResultMeasurement(verified=f_verified, error=f_error)
@@ -306,11 +306,11 @@ class ExFluke5000Agilent34401A:
             time.sleep(self.TimeDelay)
 ############################################   Agilent34401A READ RESULT    ###########################################
             if self.AutomaticAgilent34401A:
-                RFSE.Stage(f'DriverSet AgilentDMM >> mode: get >> command: result = read', 'driver')
+                RFSE.Stage(f'Драйвер: AgilentDMM >> режим: get >> команда: result = read', 'driver')
                 result = verified
             else:
-                result = RFSE.Messenger("get", "Input result#@notes",
-                                        "Enter the measured result from Agilent34401A\nPress OK", "string")
+                result = RFSE.Messenger("get", "Введите результат#@notes",
+                                        "Введите измеренный результат с Agilent34401A\nНажмите OK", "string")
             RFSE.Stage(" ")
 #######################################################################################################################
 
@@ -330,9 +330,9 @@ class ExFluke5000Agilent34401A:
                     continue
             else:
                 if accuracy > error:
-                    self.Status = 'Failed'
+                    self.Status = 'Не годен'
                 else:
-                    self.Status = 'OK'
+                    self.Status = 'Годен'
                 self.Count_meas = 0
 
             self.ContinueMeasurement = False
@@ -350,73 +350,73 @@ class ExFluke5000Agilent34401A:
 
 ############################################   Agilent34401A SET FUNC   ###############################################
             if self.AutomaticAgilent34401A:
-                RFSE.Stage(f'Driver: AgilentDMM >> mode: set >> command: func = {WireConnection} ', 'driver')
+                RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: func = {WireConnection} ', 'driver')
             else:
-                RFSE.Messenger('set', 'Make settings on Agilent34401A#@agilent34401a',
-                               f'Make settings:\nSet func = {WireConnection}\nPress OK')
+                RFSE.Messenger('set', 'Произведите настройки на Agilent34401A#@agilent34401a',
+                               f'Произведите настройки:\nУстановите func = {WireConnection}\nНажмите OK')
 #######################################################################################################################
 
 ############################################   Agilent34401A SET NPLC   ###############################################
             if WireConnection not in ['IAC', 'VAC']:
                 if self.AutomaticAgilent34401A:
-                    RFSE.Stage(f'Driver: AgilentDMM >> mode: set >> command: NPLC = 100 ', 'driver')
+                    RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: NPLC = 100 ', 'driver')
                 else:
-                    RFSE.Messenger('set', 'Make settings on Agilent34401A#@agilent34401a',
-                                   f'Make settings:\nSet NPLC = 100\nPress OK')
+                    RFSE.Messenger('set', 'Произведите настройки на Agilent34401A#@agilent34401a',
+                                   f'Произведите настройки:\nУстановите NPLC = 100\nНажмите OK')
 #######################################################################################################################
 
             if WireConnection in ['IDC', 'IAC', 'VAC']:
                 if self.AutomaticAgilent34401A:
                     if WireConnection != "IDC":
-                        RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: BAND = MIN ', 'driver')
-                    RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: NPLC = MAX ', 'driver')
+                        RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: BAND = MIN ', 'driver')
+                    RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: NPLC = MAX ', 'driver')
                 else:
-                    body_message = 'Set the filter to 3 Hz;\n' if WireConnection != 'IDC' else ''
-                    RFSE.Messenger('set', 'Make settings#@attention',
-                                   'Set Resolution = 6.5;\n' + body_message + 'Press OK')
+                    body_message = 'Установите фильтр на 3 Гц;\n' if WireConnection != 'IDC' else ''
+                    RFSE.Messenger('set', 'Произведите настройки#@attention',
+                                   'Установите разрешение = 6.5;\n' + body_message + 'Нажмите OK')
 
 ############################################   Fluke5520 SET OUT = AUX   ##############################################
             if WireConnection in ['IDC', 'IAC']:
                 if self.AutomaticFluke5520A:
-                    RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: OUT = AUX', 'driver')
+                    RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: OUT = AUX', 'driver')
                 else:
-                    RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                                   f'Make settings:\nSet OUT = AUX\nPress OK')
+                    RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                                   f'Произведите настройки:\nУстановите OUT = AUX\nНажмите OK')
 #######################################################################################################################
 
 ###########################################   Fluke5520 SET OUT = NORMAL  #############################################
             elif WireConnection != 'R2':
                 if self.AutomaticFluke5520A:
-                    RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: OUT = NORMAL', 'driver')
+                    RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: OUT = NORMAL', 'driver')
                 else:
-                    RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                                   f'Make settings:\nSet OUT = NORMAL\nPress OK')
+                    RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                                   f'Произведите настройки:\nУстановите OUT = NORMAL\nНажмите OK')
 #######################################################################################################################
 
 ############################################   Fluke5520 SET Conn = 4w  ###############################################
             if WireConnection == 'R4':
                 if self.AutomaticFluke5520A:
-                    RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Conn = 4w', 'driver')
+                    RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Conn = 4w', 'driver')
                 else:
-                    RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                                   f'Make settings:\nSet Conn = 4w\nPress OK')
+                    RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                                   f'Произведите настройки:\nУстановите Conn = 4w\nНажмите OK')
 #######################################################################################################################
 
 ############################################   Fluke5520 SET Conn = NO  ###############################################
             elif WireConnection == 'R2':
                 if self.AutomaticFluke5520A:
-                    RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Conn = NO', 'driver')
+                    RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Conn = NO', 'driver')
                 else:
-                    RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                                   f'Make settings:\nSet Conn = NO\nPress OK')
+                    RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                                   f'Произведите настройки:\nУстановите Conn = NO\nНажмите OK')
 #######################################################################################################################
 
 ##########################################   Fluke5520 SET SwitchOFF = DIS   ##########################################
             if self.AutomaticFluke5520A:
-                RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: SwitchOFF = DIS', 'driver')
+                RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: SwitchOFF = DIS', 'driver')
             else:
-                RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                               f'Make settings:\nSet SwitchOFF = DISABLE\nPress OK')
+                RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                               f'Произведите настройки:\nУстановите SwitchOFF = DISABLE\nНажмите OK')
 #######################################################################################################################
 
             RFSE.Stage(" ")
@@ -431,11 +431,11 @@ class ExFluke5000Agilent34401A:
 ########################################   Fluke5520 SET SwitchOFF = ENABLE   #########################################
 ###############################################   Fluke5520 SET Stop  #################################################
         if self.AutomaticFluke5520A:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: SwitchOFF = ENABLE', 'driver')
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Stop', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: SwitchOFF = ENABLE', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Stop', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                           f'Make settings:\nSet SwitchOFF = ENABLE\nSet Stop\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                           f'Произведите настройки:\nУстановите SwitchOFF = ENABLE\nУстановите Stop\nНажмите OK')
 #######################################################################################################################
 
         self.Driver_start = False
@@ -453,38 +453,38 @@ class ExFluke5000Agilent34401A:
         if self.WireConnection not in ['VDC', 'VAC', 'R2']:
             if WireConnection == 'VDC':
                 RFSE.Messenger('set',
-                               'Connecting wires#FLUKE5520A_AGILENT34401A_V_R2.png',
-                               'Connect a multimeter to the calibrator to check VDC voltage.\n'
-                               'Calibrator output NORMAL')
+                               'Подключение проводов#FLUKE5520A_AGILENT34401A_V_R2.png',
+                               'Подключите мультиметр к калибратору для проверки напряжения VDC.\n'
+                               'Выход калибратора NORMAL')
             elif WireConnection == 'VAC':
                 RFSE.Messenger('set',
-                               'Connecting wires#FLUKE5520A_AGILENT34401A_V_R2.png',
-                               'Connect a multimeter to the calibrator to check VAC voltage.\n'
-                               'Calibrator output NORMAL')
+                               'Подключение проводов#FLUKE5520A_AGILENT34401A_V_R2.png',
+                               'Подключите мультиметр к калибратору для проверки напряжения VAC.\n'
+                               'Выход калибратора NORMAL')
             elif WireConnection == 'R2':
                 RFSE.Messenger('set',
-                               'Connecting wires#FLUKE5520A_AGILENT34401A_V_R2.png',
-                               'Connect a multimeter to the calibrator to check R2 resistance.\n'
-                               'Calibrator output NORMAL')
+                               'Подключение проводов#FLUKE5520A_AGILENT34401A_V_R2.png',
+                               'Подключите мультиметр к калибратору для проверки сопротивления R2.\n'
+                               'Выход калибратора NORMAL')
         if self.WireConnection not in ['IDC', 'IAC']:
             if WireConnection == 'IDC':
                 RFSE.Messenger("set",
-                               'Connecting wires#FLUKE5520A_AGILENT34401A_I.png',
-                               'Connect a multimeter to the calibrator to test.\n'
-                               'DC current IDC up to 3 A.\n'
-                               'Calibrator output AUX up to 2 A.')
+                               'Подключение проводов#FLUKE5520A_AGILENT34401A_I.png',
+                               'Подключите мультиметр к калибратору для проверки.\n'
+                               'Постоянный ток IDC до 3 А.\n'
+                               'Выход калибратора AUX до 2 А.')
             elif WireConnection == 'IAC':
                 RFSE.Messenger("set",
-                               'Connecting wires#FLUKE5520A_AGILENT34401A_I.png',
-                               'Connect a multimeter to the calibrator to test.\n'
-                               'AC current IAC up to 3 A.\n'
-                               'Calibrator output AUX up to 2 A.')
+                               'Подключение проводов#FLUKE5520A_AGILENT34401A_I.png',
+                               'Подключите мультиметр к калибратору для проверки.\n'
+                               'Переменный ток IAC до 3 А.\n'
+                               'Выход калибратора AUX до 2 А.')
 
         if self.WireConnection not in ['R4']:
             if WireConnection == 'R4':     RFSE.Messenger('set',
-                                                          'Connecting wires#FLUKE5520A_AGILENT34401A_R4.png',
-                                                          'Connect a multimeter to the calibrator to check.\n'
-                                                          'RES resistance in 4-wire circuit.')
+                                                          'Подключение проводов#FLUKE5520A_AGILENT34401A_R4.png',
+                                                          'Подключите мультиметр к калибратору для проверки.\n'
+                                                          'Сопротивление RES в 4-х проводной схеме.')
 
         self.WireConnection = WireConnection
         RFSE.Stage(' ')
@@ -499,7 +499,7 @@ class ExFluke5000Agilent34401A:
     def CheckConnectDevices(self) -> None:
         if self.FirstScriptStart:
             RFSE.Stage('*****************************************************')
-            RFSE.Stage('***************** Connect Devices *******************')
+            RFSE.Stage('***************** Подключение устройств *******************')
             RFSE.Stage('*****************************************************')
 
             self.InitializationAGILENT34401A(init=False)
@@ -513,45 +513,45 @@ class ExFluke5000Agilent34401A:
 
     def InitializationAGILENT34401A(self, init=True):
 
-        type_setting_agilent = RFSE.Messenger("get", "Choose a way to connect AGILENT34401A#@agilent34401a",
-                                                     "Please select an Agilent34401A instrument setup type",
-                                                     "choice=Automatic;Manual")
+        type_setting_agilent = RFSE.Messenger("get", "Выберите способ подключения AGILENT34401A#@agilent34401a",
+                                                     "Пожалуйста, выберите тип настройки прибора Agilent34401A",
+                                                     "choice=Автоматически;Вручную")
 
         RFSE.Stage(" ")
 
-        RFSE.Report("TYPE_SETTING_AGILENT34401A", "info", "string", "Device setting type")
+        RFSE.Report("TYPE_SETTING_AGILENT34401A", "info", "string", "Тип настройки прибора")
 
 ############################################   AGILENT34401A Init   ###################################################
 #########################################   AGILENT34401A SET Timeout  ################################################
 ##########################################   AGILENT34401A SET Reset  #################################################
-        if type_setting_agilent == 'Automatic':
+        if type_setting_agilent == 'Автоматически':
 
             choices = None
 
-            RFSE.Stage('Driver: AgilentDMM >> mode: init >> command: ', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: init >> команда: ', 'driver')
             agilent3401a_status = 'connected'
 
             if agilent3401a_status != 'connected':
-                choices = RFSE.Messenger("get", "AGILENT34401A initialization not successful#@agilent34401a",
-                                         "Failed to initialize AGILENT34401A. Do you want to continue measuring in "
-                                         "Manual mode?", "boolean")
+                choices = RFSE.Messenger("get", "Инициализация AGILENT34401A не удалась#@agilent34401a",
+                                         "Не удалось инициализировать AGILENT34401A. Вы хотите продолжить измерение в "
+                                         "ручном режиме?", "boolean")
 
             if not choices or agilent3401a_status == 'connected':
                 self.AutomaticAgilent34401A = True
-                RFSE.Report("TYPE_SETTING_AGILENT34401A", "set", 'string', 'Automatic')
-                RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: Timeout = 10000', 'driver')
-                RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: Reset', 'driver')
+                RFSE.Report("TYPE_SETTING_AGILENT34401A", "set", 'string', 'Автоматически')
+                RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: Timeout = 10000', 'driver')
+                RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: Reset', 'driver')
             else:
-                type_setting_agilent = 'Manual'
+                type_setting_agilent = 'Вручную'
 
-        if type_setting_agilent == 'Manual':
-            RFSE.Report("TYPE_SETTING_AGILENT34401A", "set", 'string', 'Manual')
+        if type_setting_agilent == 'Вручную':
+            RFSE.Report("TYPE_SETTING_AGILENT34401A", "set", 'string', 'Вручную')
             self.AutomaticAgilent34401A = False
-            RFSE.Messenger("set", "Make settings Agilent34401A#@agilent34401a", "Make settings:\n"
-                                                                                "Turn on the device\n"
-                                                                                "Set Timeout = 10000\n"
-                                                                                "Set Reset\n"
-                                                                                "Press OK")
+            RFSE.Messenger("set", "Произведите настройки Agilent34401A#@agilent34401a", "Произведите настройки:\n"
+                                                                                "Включите прибор\n"
+                                                                                "Установите Timeout = 10000\n"
+                                                                                "Выполните сброс\n"
+                                                                                "Нажмите OK")
 
 #######################################################################################################################
 
@@ -567,47 +567,47 @@ class ExFluke5000Agilent34401A:
 
     def InitializationFluke5520A(self, init=True):
 
-        type_setting_fluke = RFSE.Messenger("get", "Choose a way to connect FLUKE5520A#@fluke5520a",
-                                                   "Please select an FLUKE5520 instrument setup type",
-                                                   "choice=Automatic;Manual")
+        type_setting_fluke = RFSE.Messenger("get", "Выберите способ подключения FLUKE5520A#@fluke5520a",
+                                                   "Пожалуйста, выберите тип настройки прибора FLUKE5520",
+                                                   "choice=Автоматически;Вручную")
 
         RFSE.Stage(" ")
 
-        RFSE.Report("TYPE_SETTING_FLUKE5520A", "info", "string", "Device setting type")
+        RFSE.Report("TYPE_SETTING_FLUKE5520A", "info", "string", "Тип настройки прибора")
 
 ###################################################   Fluke5520 Init   ################################################
 ###############################################   Fluke5520 SET Timeout  ##############################################
 ################################################   Fluke5520 SET Reset  ###############################################
 
-        if type_setting_fluke == 'Automatic':
+        if type_setting_fluke == 'Автоматически':
 
             choices = None
 
-            RFSE.Stage('Driver: Fluke5000 >> mode: init >> command: ', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: init >> команда: ', 'driver')
             fluke_5520a_status = 'connected'
 
             if fluke_5520a_status != 'connected':
-                choices = RFSE.Messenger("get", "Fluke5520A initialization not successful#@fluke5520a",
-                                         "Failed to initialize Fluke5520A. Do you want to continue measuring in "
-                                         "Manual mode?", "boolean")
+                choices = RFSE.Messenger("get", "Инициализация Fluke5520A не удалась#@fluke5520a",
+                                         "Не удалось инициализировать Fluke5520A. Вы хотите продолжить измерение в "
+                                         "ручном режиме?", "boolean")
             if not choices or fluke_5520a_status == 'connected':
 
                 self.AutomaticFluke5520A = True
 
-                RFSE.Report("TYPE_SETTING_FLUKE5520A", "set", "string", "Automatic")
-                RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Timeout = 10000', 'driver')
-                RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Reset', 'driver')
+                RFSE.Report("TYPE_SETTING_FLUKE5520A", "set", "string", "Автоматически")
+                RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Timeout = 10000', 'driver')
+                RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Reset', 'driver')
             else:
-                type_setting_fluke = 'Manual'
+                type_setting_fluke = 'Вручную'
 
-        if type_setting_fluke == 'Manual':
-            RFSE.Report("TYPE_SETTING_FLUKE5520A", "set", "string", "Manual")
+        if type_setting_fluke == 'Вручную':
+            RFSE.Report("TYPE_SETTING_FLUKE5520A", "set", "string", "Вручную")
             self.AutomaticFluke5520A = False
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a", "Make settings:\n"
-                                                                             "Turn on the device\n"
-                                                                             "Set Timeout = 10000\n"
-                                                                             "Set Reset\n"
-                                                                             "Press OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a", "Произведите настройки:\n"
+                                                                             "Включите прибор\n"
+                                                                             "Установите Timeout = 10000\n"
+                                                                             "Выполните сброс\n"
+                                                                             "Нажмите OK")
 
 
 #######################################################################################################################
@@ -635,21 +635,21 @@ class ExFluke5000Agilent34401A:
     def CallMessengerChoices(self, verified, error, result, reference_number) -> str:
         self.SettingMeasurementLimits(verified=verified, error=error)
 
-        limit_type = "lower" if self.LowerLimitResult > result else "upper"
-        limit_value = self.LowerLimitResult - result if limit_type == "lower" else result - self.UpperLimitResult
+        limit_type = "нижний" if self.LowerLimitResult > result else "верхний"
+        limit_value = self.LowerLimitResult - result if limit_type == "нижний" else result - self.UpperLimitResult
 
-        error_message = 'Do you want to repeat measuring this point?\n'
-        error_message += f'Lower limit < Result < Upper limit\n'
+        error_message = 'Вы хотите повторить измерение этой точки?\n'
+        error_message += f'Нижний предел < Результат < Верхний предел\n'
         error_message += f'{MFRT.ConvertFloatToString(self.LowerLimitResult, reference_number)} < '
         error_message += f'{MFRT.ConvertFloatToString(result, reference_number)} < '
         error_message += f'{MFRT.ConvertFloatToString(self.UpperLimitResult, reference_number)}\n'
-        error_message += f'The measurement does not meet the {limit_type} limit ' \
-                         f'on {MFRT.ConvertFloatToString(limit_value, reference_number)}'
+        error_message += f'Измерение не соответствует {limit_type} пределу ' \
+                         f'на {MFRT.ConvertFloatToString(limit_value, reference_number)}'
 
-        choices = RFSE.Messenger('get', 'The measurement result did not pass the specified limit#@repeat',
+        choices = RFSE.Messenger('get', 'Результат измерения не прошел указанный предел#@repeat',
                                  error_message, 'boolean')
 
-        self.Status = "Failed"
+        self.Status = "Не годен"
         self.Count_meas = 0
         return choices
 
@@ -660,19 +660,19 @@ class ExFluke5000Agilent34401A:
     def CallMessengerErrorPoint(self, verified, error, result, reference_number) -> None:
         self.SettingMeasurementLimits(verified=verified, error=error)
 
-        limit_type = "lower" if self.LowerLimitResult > result else "upper"
-        limit_value = self.LowerLimitResult - result if limit_type == "lower" else result - self.UpperLimitResult
+        limit_type = "нижний" if self.LowerLimitResult > result else "верхний"
+        limit_value = self.LowerLimitResult - result if limit_type == "нижний" else result - self.UpperLimitResult
 
-        error_message = 'The measurement result did not pass the specified limit\n'
-        error_message += 'The value is being remeasured\n'
-        error_message += f'Lower limit <  Result < Upper limit\n'
+        error_message = 'Результат измерения не прошел указанный предел\n'
+        error_message += 'Значение переизмеряется\n'
+        error_message += f'Нижний предел <  Результат < Верхний предел\n'
         error_message += f'{MFRT.ConvertFloatToString(self.LowerLimitResult, reference_number)} < '
         error_message += f'{MFRT.ConvertFloatToString(result, reference_number)} < '
         error_message += f'{MFRT.ConvertFloatToString(self.UpperLimitResult, reference_number)}\n'
-        error_message += f'The measurement does not meet the {limit_type} limit ' \
-                         f'on {MFRT.ConvertFloatToString(limit_value, reference_number)}'
+        error_message += f'Измерение не соответствует {limit_type} пределу ' \
+                         f'на {MFRT.ConvertFloatToString(limit_value, reference_number)}'
 
-        RFSE.Messenger('set', 'Measurement failed#@failed', error_message, delaytime='5')
+        RFSE.Messenger('set', 'Измерение не удалось#@failed', error_message, delaytime='5')
         self.Count_meas += 1
 
 #######################################################################################################################
@@ -684,42 +684,42 @@ class ExFluke5000Agilent34401A:
 
     @staticmethod
     def LoadTablesHeadInfo() -> None:
-        RFSE.Report('VDC', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('VDC', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
-        RFSE.Report('VAC', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Frequency#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('VAC', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Частота#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
-        RFSE.Report('RES', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('RES', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
-        RFSE.Report('IDC', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('IDC', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
-        RFSE.Report('IAC', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Frequency#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('IAC', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Частота#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
         RFSE.Stage(" ")
 
 #######################################################################################################################
@@ -739,12 +739,12 @@ class ExFluke5000Agilent34401A:
         else:
             self.FirstScriptStart = False
 
-        if type_setting_Fluke5520A.lower() == 'automatic':
+        if type_setting_Fluke5520A.lower() == 'автоматически':
             self.AutomaticFluke5520A = True
         else:
             self.AutomaticFluke5520A = False
 
-        if type_setting_Agilent34401A.lower() == 'automatic':
+        if type_setting_Agilent34401A.lower() == 'автоматически':
             self.AutomaticAgilent34401A = True
         else:
             self.AutomaticAgilent34401A = False

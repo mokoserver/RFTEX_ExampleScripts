@@ -39,7 +39,7 @@ class SettingsAndMeasurement:
 #####################################################  VDC MEAS  ######################################################
 #######################################################################################################################
 
-        RFSE.Stage(f'VDC Measure -> range = {range}, verified = {verified}, error = {error}')
+        RFSE.Stage(f'Измерение VDC -> диапазон = {range}, поверяемое = {verified}, погрешность = {error}')
 
         self.Agilent34401A.SET_RANGE(range=range)
 
@@ -72,7 +72,7 @@ class SettingsAndMeasurement:
 ####################################################  VAC MEAS  #######################################################
 #######################################################################################################################
 
-        RFSE.Stage(f'VAC Measure -> range = {range}, verified = {verified}, frequency = {frequency}, error = {error}')
+        RFSE.Stage(f'Измерение VAC -> диапазон = {range}, поверяемое = {verified}, частота = {frequency}, погрешность = {error}')
 
         self.Agilent34401A.SET_RANGE(range=range)
 
@@ -105,7 +105,7 @@ class SettingsAndMeasurement:
 ####################################################  R2 MEAS  ########################################################
 #######################################################################################################################
 
-        RFSE.Stage(f'R2 Measure -> range = {range}, verified = {verified}, error = {error}')
+        RFSE.Stage(f'Измерение R2 -> диапазон = {range}, поверяемое = {verified}, погрешность = {error}')
 
         self.Agilent34401A.SET_RANGE(range=range)
 
@@ -137,7 +137,7 @@ class SettingsAndMeasurement:
 #####################################################  R4 MEAS  #######################################################
 #######################################################################################################################
 
-        RFSE.Stage(f'R4 Measure -> range = {range}, verified = {verified}, error = {error}')
+        RFSE.Stage(f'Измерение R4 -> диапазон = {range}, поверяемое = {verified}, погрешность = {error}')
 
         if self.R4FirstResult:
             
@@ -177,7 +177,7 @@ class SettingsAndMeasurement:
 #####################################################  IDC MEAS  ######################################################
 #######################################################################################################################
 
-        RFSE.Stage(f'IDC Measure -> range = {range}, verified = {verified}, error = {error}')
+        RFSE.Stage(f'Измерение IDC -> диапазон = {range}, поверяемое = {verified}, погрешность = {error}')
 
         self.Agilent34401A.SET_RANGE(range=range)
 
@@ -210,8 +210,8 @@ class SettingsAndMeasurement:
 #####################################################  IAC MEAS  ######################################################
 #######################################################################################################################
 
-        RFSE.Stage(f'IAC Measure -> range = {range}, verified = {verified}, frequency = {frequency}, '
-                   f'error = {error}')
+        RFSE.Stage(f'Измерение IAC -> диапазон = {range}, поверяемое = {verified}, частота = {frequency}, '
+                   f'погрешность = {error}')
 
         self.Agilent34401A.SET_RANGE(range=range)
 
@@ -264,10 +264,10 @@ class SettingsAndMeasurement:
                     continue
 
             if accuracy > error:
-                self.Status = 'Failed'
+                self.Status = 'Не годен'
                 MOSC.hash_failed()
             else:
-                self.Status = 'OK'
+                self.Status = 'Годен'
                 MOSC.hash_passed()
 
             self.Count_meas = 0
@@ -346,36 +346,36 @@ class SettingsAndMeasurement:
             match WireConnection:
                 case "VDC":
                     RFSE.Messenger('set',
-                                   'Connecting wires#FLUKE5520A_AGILENT34401A_V_R2.png',
-                                   'Connect a multimeter to the calibrator to check VDC voltage.\n'
-                                   'Calibrator output NORMAL')
+                                   'Подключение проводов#FLUKE5520A_AGILENT34401A_V_R2.png',
+                                   'Подключите мультиметр к калибратору для проверки напряжения VDC.\n'
+                                   'Выход калибратора NORMAL')
                 case "VAC":
                     RFSE.Messenger('set',
-                                   'Connecting wires#FLUKE5520A_AGILENT34401A_V_R2.png',
-                                   'Connect a multimeter to the calibrator to check VAC voltage.\n'
-                                   'Calibrator output NORMAL')
+                                   'Подключение проводов#FLUKE5520A_AGILENT34401A_V_R2.png',
+                                   'Подключите мультиметр к калибратору для проверки напряжения VAC.\n'
+                                   'Выход калибратора NORMAL')
                 case "R2":
                     RFSE.Messenger('set',
-                                   'Connecting wires#FLUKE5520A_AGILENT34401A_V_R2.png',
-                                   'Connect a multimeter to the calibrator to check R2 resistance.\n'
-                                   'Calibrator output NORMAL')
+                                   'Подключение проводов#FLUKE5520A_AGILENT34401A_V_R2.png',
+                                   'Подключите мультиметр к калибратору для проверки сопротивления R2.\n'
+                                   'Выход калибратора NORMAL')
                 case "R4":
                     RFSE.Messenger('set',
-                                   'Connecting wires#FLUKE5520A_AGILENT34401A_R4.png',
-                                   'Connect a multimeter to the calibrator to check.\n'
-                                   'RES resistance in 4-wire circuit.')
+                                   'Подключение проводов#FLUKE5520A_AGILENT34401A_R4.png',
+                                   'Подключите мультиметр к калибратору для проверки.\n'
+                                   'Сопротивление RES в 4-х проводной схеме.')
                 case "IDC":
                     RFSE.Messenger("set",
-                                   'Connecting wires#FLUKE5520A_AGILENT34401A_I.png',
-                                   'Connect a multimeter to the calibrator to test.\n'
-                                   'DC current IDC up to 3 A.\n'
-                                   'Calibrator output AUX up to 2 A.')
+                                   'Подключение проводов#FLUKE5520A_AGILENT34401A_I.png',
+                                   'Подключите мультиметр к калибратору для проверки.\n'
+                                   'Постоянный ток IDC до 3 А.\n'
+                                   'Выход калибратора AUX до 2 А.')
                 case "IAC":
                     RFSE.Messenger("set",
-                                   'Connecting wires#FLUKE5520A_AGILENT34401A_I.png',
-                                   'Connect a multimeter to the calibrator to test.\n'
-                                   'AC current IAC up to 3 A.\n'
-                                   'Calibrator output AUX up to 2 A.')
+                                   'Подключение проводов#FLUKE5520A_AGILENT34401A_I.png',
+                                   'Подключите мультиметр к калибратору для проверки.\n'
+                                   'Переменный ток IAC до 3 А.\n'
+                                   'Выход калибратора AUX до 2 А.')
 
             self.WireConnection = WireConnection
             RFSE.Stage(' ')
@@ -390,7 +390,7 @@ class SettingsAndMeasurement:
     def CheckConnectDevices(self) -> None:
         if self.FirstScriptStart:
             RFSE.Stage('*****************************************************')
-            RFSE.Stage('***************** Connect Devices *******************')
+            RFSE.Stage('***************** Подключение устройств *******************')
             RFSE.Stage('*****************************************************')
 
             self.Agilent34401A.Initialization(init=False)
@@ -420,21 +420,21 @@ class SettingsAndMeasurement:
 
         self.SettingMeasurementLimits(verified=verified, error=error)
 
-        limit_type = "lower" if self.LowerLimitResult > result else "upper"
-        limit_value = self.LowerLimitResult - result if limit_type == "lower" else result - self.UpperLimitResult
+        limit_type = "нижний" if self.LowerLimitResult > result else "верхний"
+        limit_value = self.LowerLimitResult - result if limit_type == "нижний" else result - self.UpperLimitResult
 
-        error_message = 'Do you want to repeat measuring this point?\n'
-        error_message += f'Lower limit < Result < Upper limit\n'
+        error_message = 'Вы хотите повторить измерение этой точки?\n'
+        error_message += f'Нижний предел < Результат < Верхний предел\n'
         error_message += f'{MFRT.ConvertFloatToString(self.LowerLimitResult, reference_number)} < '
         error_message += f'{MFRT.ConvertFloatToString(result, reference_number)} < '
         error_message += f'{MFRT.ConvertFloatToString(self.UpperLimitResult, reference_number)}\n'
-        error_message += f'The measurement does not meet the {limit_type} limit ' \
-                         f'on {MFRT.ConvertFloatToString(limit_value, reference_number)}'
+        error_message += f'Измерение не соответствует {limit_type} пределу ' \
+                         f'на {MFRT.ConvertFloatToString(limit_value, reference_number)}'
 
-        choices = RFSE.Messenger('get', 'The measurement result did not pass the specified limit#@repeat',
+        choices = RFSE.Messenger('get', 'Результат измерения не прошел указанный предел#@repeat',
                                  error_message, 'boolean')
 
-        self.Status = "Failed"
+        self.Status = "Не годен"
         self.Count_meas = 0
         return choices
 
@@ -447,19 +447,19 @@ class SettingsAndMeasurement:
 
         self.SettingMeasurementLimits(verified=verified, error=error)
 
-        limit_type = "lower" if self.LowerLimitResult > result else "upper"
-        limit_value = self.LowerLimitResult - result if limit_type == "lower" else result - self.UpperLimitResult
+        limit_type = "нижний" if self.LowerLimitResult > result else "верхний"
+        limit_value = self.LowerLimitResult - result if limit_type == "нижний" else result - self.UpperLimitResult
 
-        error_message = 'The measurement result did not pass the specified limit\n'
-        error_message += 'The value is being remeasured\n'
-        error_message += f'Lower limit <  Result < Upper limit\n'
+        error_message = 'Результат измерения не прошел указанный предел\n'
+        error_message += 'Значение переизмеряется\n'
+        error_message += f'Нижний предел <  Результат < Верхний предел\n'
         error_message += f'{MFRT.ConvertFloatToString(self.LowerLimitResult, reference_number)} < '
         error_message += f'{MFRT.ConvertFloatToString(result, reference_number)} < '
         error_message += f'{MFRT.ConvertFloatToString(self.UpperLimitResult, reference_number)}\n'
-        error_message += f'The measurement does not meet the {limit_type} limit ' \
-                         f'on {MFRT.ConvertFloatToString(limit_value, reference_number)}'
+        error_message += f'Измерение не соответствует {limit_type} пределу ' \
+                         f'на {MFRT.ConvertFloatToString(limit_value, reference_number)}'
 
-        RFSE.Messenger('set', 'Measurement failed#@failed', error_message, delaytime='5')
+        RFSE.Messenger('set', 'Измерение не удалось#@failed', error_message, delaytime='5')
         self.Count_meas += 1
 
 #######################################################################################################################
@@ -470,42 +470,42 @@ class SettingsAndMeasurement:
 
     @staticmethod
     def LoadTablesHeadInfo() -> None:
-        RFSE.Report('VAC', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Frequency#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('VAC', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Частота#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
-        RFSE.Report('VDC', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('VDC', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
-        RFSE.Report('RES', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('RES', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
-        RFSE.Report('IAC', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Frequency#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('IAC', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Частота#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
-        RFSE.Report('IDC', 'info', 'table', "Range#100;"
-                                            "Point#100;"
-                                            "Result#100;"
-                                            "Accuracy#100;"
-                                            "Permissible error#100;"
-                                            "Conclusion#100;")
+        RFSE.Report('IDC', 'info', 'table', "Диапазон#100;"
+                                            "Точка#100;"
+                                            "Результат#100;"
+                                            "Точность#100;"
+                                            "Допустимая погрешность#100;"
+                                            "Заключение#100;")
 
         RFSE.Stage(" ")
 
@@ -536,12 +536,12 @@ class SettingsAndMeasurement:
             self.Agilent34401A.IsSimulation = False
             self.Fluke5520A.IsSimulation = False
 
-        if type_setting_Fluke5520A.lower() == 'automatic':
+        if type_setting_Fluke5520A.lower() == 'автоматически':
             self.Fluke5520A.IsAutomatic = True
         else:
             self.Fluke5520A.IsAutomatic = False
 
-        if type_setting_Agilent34401A.lower() == 'automatic':
+        if type_setting_Agilent34401A.lower() == 'автоматически':
             self.Agilent34401A.IsAutomatic = True
         else:
             self.Agilent34401A.IsAutomatic = False
@@ -554,7 +554,7 @@ class SettingsAndMeasurement:
 #######################################################################################################################
 
     def check_simulation_mode(self) -> None:
-        hash_list = ['Initialization AGILENT34401A$Init', 'Initialization FLUKE5520A$Init']
+        hash_list = ['Инициализация AGILENT34401A$Init', 'Инициализация FLUKE5520A$Init']
         if self.Agilent34401A.IsSimulation or self.Fluke5520A.IsSimulation:
 
             self.Agilent34401A.IsSimulation = True
@@ -572,6 +572,5 @@ class SettingsAndMeasurement:
 ########################################################################################################################
 ########################################################################################################################
 ########################################################################################################################
-
 
 Poverka = SettingsAndMeasurement()

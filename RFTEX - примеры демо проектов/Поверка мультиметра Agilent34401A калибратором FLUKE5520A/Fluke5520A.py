@@ -20,11 +20,11 @@ class Fluke5520A:
 
     def Choice_Connected(self) -> str:
 
-        type_connected = RFSE.Messenger("get", "Choose a way to connect Fluke5520A#@fluke5520a",
-                                            "Please select an Fluke5520A instrument setup type\n"
-                                            "Attention. By selecting simulation mode, "
-                                            "you run all measurements in simulation mode!!!",
-                                            "choice=Automatic;Manual")
+        type_connected = RFSE.Messenger("get", "Выберите способ подключения Fluke5520A#@fluke5520a",
+                                            "Пожалуйста, выберите тип настройки прибора Fluke5520A\n"
+                                            "Внимание. Выбирая режим симуляции, "
+                                            "вы запускаете все измерения в режиме симуляции!!!",
+                                            "choice=Автоматически;Вручную")
 
         RFSE.Stage(" ")
         return type_connected
@@ -37,15 +37,15 @@ class Fluke5520A:
 
         type_setting_fluke = self.Choice_Connected()
 
-        RFSE.Report("TYPE_SETTING_FLUKE5520A", "info", "string", "Device setting type")
+        RFSE.Report("TYPE_SETTING_FLUKE5520A", "info", "string", "Тип настройки прибора")
 
         match type_setting_fluke:
-            case 'Automatic':
+            case 'Автоматически':
                 self.IsAutomatic = True
-                RFSE.Report("TYPE_SETTING_FLUKE5520A", "set", 'string', 'Automatic')
-            case "Manual":
+                RFSE.Report("TYPE_SETTING_FLUKE5520A", "set", 'string', 'Автоматически')
+            case "Вручную":
                 self.IsAutomatic = False
-                RFSE.Report("TYPE_SETTING_FLUKE5520A", "set", 'string', 'Manual')
+                RFSE.Report("TYPE_SETTING_FLUKE5520A", "set", 'string', 'Вручную')
 
         self.SET_TIMEOUT()
         self.SET_RESET()
@@ -64,13 +64,13 @@ class Fluke5520A:
 
     def INIT_DEVICE(self) -> str:
         if self.IsSimulation:
-            RFSE.Stage('Driver: Fluke5000 >> mode: init >> command: ', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: init >> команда: ', 'driver')
             return "connected"
         elif self.IsAutomatic:
             return RFSE.Driver('Fluke5000', 'init', '')
         else:
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                           "Make settings:\nTurn on the device\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                           "Произведите настройки:\nВключите прибор\nНажмите OK")
 
             return "connected"
 
@@ -80,10 +80,10 @@ class Fluke5520A:
 
     def SET_TIMEOUT(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Timeout = 10000', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Timeout = 10000', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                           "Make settings:\nSet Reset\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                           "Произведите настройки:\nСброс\nНажмите OK")
 
 #######################################################################################################################
 ###############################################  Fluke5520A SET RESET  ################################################
@@ -91,10 +91,10 @@ class Fluke5520A:
 
     def SET_RESET(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Reset', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Reset', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                           "Make settings:\nSet Timeout = 10000\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                           "Произведите настройки:\nУстановите Timeout = 10000\nНажмите OK")
 
 #######################################################################################################################
 ############################################   Fluke5520 SET OUT = AUX   ##############################################
@@ -102,10 +102,10 @@ class Fluke5520A:
 
     def SET_OUT_AUX(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: OUT = AUX', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: OUT = AUX', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                           'Make settings:\nSet OUT = AUX\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                           'Произведите настройки:\nУстановите OUT = AUX\nНажмите OK')
 
 #######################################################################################################################
 ############################################   Fluke5520 SET OUT = NORMAL   ###########################################
@@ -113,10 +113,10 @@ class Fluke5520A:
 
     def SET_OUT_NORMAL(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: OUT = NORMAL', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: OUT = NORMAL', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                           'Make settings:\nSet OUT = NORMAL\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                           'Произведите настройки:\nУстановите OUT = NORMAL\nНажмите OK')
 
 #######################################################################################################################
 ############################################   Fluke5520 SET Conn = 4w  ###############################################
@@ -124,10 +124,10 @@ class Fluke5520A:
 
     def SET_CONN_4W(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Conn = 4w', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Conn = 4w', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                           'Make settings:\nSet Conn = 4w\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                           'Произведите настройки:\nУстановите Conn = 4w\nНажмите OK')
 
 #######################################################################################################################
 ############################################   Fluke5520 SET Conn = NO  ###############################################
@@ -135,20 +135,20 @@ class Fluke5520A:
 
     def SET_CONN_NO(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Conn = NO', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Conn = NO', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                           'Make settings:\nSet Conn = NO\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                           'Произведите настройки:\nУстановите Conn = NO\nНажмите OK')
 
 #######################################################################################################################
 ###############################################   Fluke5520 SET VDC   #################################################
 #######################################################################################################################
     def SET_VDC(self, verified: (str | float | int)) -> None:
         if self.IsAutomatic:
-            RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: VDC = {verified}', 'driver')
+            RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: VDC = {verified}', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                           f"Make settings:\nSet VDC = {verified}\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                           f"Произведите настройки:\nУстановите VDC = {verified}\nНажмите OK")
 
 #######################################################################################################################
 ###############################################   Fluke5520 SET VAC   #################################################
@@ -156,43 +156,43 @@ class Fluke5520A:
 
     def SET_VAC(self, verified: (str | float | int), frequency: (str | float | int)) -> None:
         if self.IsAutomatic:
-            RFSE.Stage(f'DriverSet Fluke5000 >> mode: set >> command: VAC = {verified} {frequency}', 'driver')
+            RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: VAC = {verified} {frequency}', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                           f"Make settings:\nSet VAC = {verified} {frequency}\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                           f"Произведите настройки:\nУстановите VAC = {verified} {frequency}\nНажмите OK")
 
 #######################################################################################################################
 ###############################################   Fluke5520 SET R   ###################################################
 #######################################################################################################################
     def SET_R(self, verified: (str | float | int)) -> None:
         if self.IsSimulation:
-            RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: R = {verified}', 'driver')
+            RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: R = {verified}', 'driver')
         elif self.IsAutomatic:
-            RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: R = {verified}', 'driver')
+            RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: R = {verified}', 'driver')
             #RFSE.Driver('Fluke5000', 'set', f'R = {verified}')
         else:
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                           f"Make settings:\nSet R = {verified}\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                           f"Произведите настройки:\nУстановите R = {verified}\nНажмите OK")
 
 #######################################################################################################################
 ###############################################   Fluke5520 SET IDC   #################################################
 #######################################################################################################################
     def SET_IDC(self, verified: (str | float | int)) -> None:
         if self.IsAutomatic:
-            RFSE.Stage(f'Driver: Fluke5000 >> mode: set >> command: IDC = {verified}', 'driver')
+            RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: IDC = {verified}', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                           f"Make settings:\nSet IDC = {verified}\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                           f"Произведите настройки:\nУстановите IDC = {verified}\nНажмите OK")
 
 #######################################################################################################################
 ###############################################   Fluke5520 SET IAC   #################################################
 #######################################################################################################################
     def SET_IAC(self, verified: (str | float | int), frequency: (str | float | int)) -> None:
         if self.IsAutomatic:
-            RFSE.Stage(f'DriverSet Fluke5000 >> mode: set >> command: IAC = {verified} {frequency}', 'driver')
+            RFSE.Stage(f'Драйвер: Fluke5000 >> режим: set >> команда: IAC = {verified} {frequency}', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings on Fluke5520A#@fluke5520a",
-                           f"Make settings:\nSet IAC = {verified} {frequency}\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Fluke5520A#@fluke5520a",
+                           f"Произведите настройки:\nУстановите IAC = {verified} {frequency}\nНажмите OK")
 
 #######################################################################################################################
 #######################################   Fluke5520 SET SwitchOFF = Enable   ##########################################
@@ -200,10 +200,10 @@ class Fluke5520A:
 
     def SET_SwitchOFF_Enable(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: SwitchOFF = ENABLE', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: SwitchOFF = ENABLE', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                           'Make settings:\nSet Stop\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                           'Произведите настройки:\nУстановите Stop\nНажмите OK')
 
 #######################################################################################################################
 ##########################################   Fluke5520 SET SwitchOFF = DIS   ##########################################
@@ -211,10 +211,10 @@ class Fluke5520A:
 
     def SET_SwitchOFF_DIS(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: SwitchOFF = DIS', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: SwitchOFF = DIS', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                           'Make settings:\nSet SwitchOFF = DISABLE\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                           'Произведите настройки:\nУстановите SwitchOFF = DISABLE\nНажмите OK')
 
 #######################################################################################################################
 ##############################################   Fluke5520 SET STOP   #################################################
@@ -222,7 +222,7 @@ class Fluke5520A:
 
     def SET_STOP(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: Fluke5000 >> mode: set >> command: Stop', 'driver')
+            RFSE.Stage('Драйвер: Fluke5000 >> режим: set >> команда: Stop', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Fluke5520A#@fluke5520a',
-                           'Make settings:\nSet Stop\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Fluke5520A#@fluke5520a',
+                           'Произведите настройки:\nУстановите Stop\nНажмите OK')

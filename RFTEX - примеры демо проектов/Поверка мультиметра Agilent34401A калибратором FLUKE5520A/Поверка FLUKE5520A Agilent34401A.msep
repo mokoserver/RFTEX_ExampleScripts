@@ -1,0 +1,17 @@
+{
+"name":"Поверка FLUKE5520A Agilent34401A",
+"autosave":"true",
+"scripts":[
+{"file":"01 Проверка регистрации модуля.py","necessary":"true"},
+{"file":"02 Инициализация устройств. Драйверы Fluke5000 и AgilentDMM.py","necessary":"true"},
+{"file":"03 Поверка Agilent34401A калибратором Fluke5520A.py","necessary":"false"},
+{"file":"04 Сохранение отчета в Word.py","necessary":"true"}
+],
+"libraries":[
+{"file":"RFSE.py"},
+{"file":"MOSC.py"}
+],
+"templates":[
+{"file":"Отчет.docx"}
+]
+}

@@ -18,11 +18,11 @@ class Agilent34401A:
 #######################################################################################################################
     def Choice_Connected(self) -> str:
 
-        type_connected = RFSE.Messenger("get", "Choose a way to connect AGILENT34401A#@agilent34401a",
-                                            "Please select an Agilent34401A instrument setup type\n"
-                                            "Attention. By selecting simulation mode, "
-                                            "you run all measurements in simulation mode!!!",
-                                            "choice=Automatic;Manual")
+        type_connected = RFSE.Messenger("get", "Выберите способ подключения AGILENT34401A#@agilent34401a",
+                                            "Пожалуйста, выберите тип настройки прибора Agilent34401A\n"
+                                            "Внимание. Выбирая режим симуляции, "
+                                            "вы запускаете все измерения в режиме симуляции!!!",
+                                            "choice=Автоматически;Вручную")
 
         RFSE.Stage(" ")
         return type_connected
@@ -35,15 +35,15 @@ class Agilent34401A:
 
         type_setting_agilent = self.Choice_Connected()
 
-        RFSE.Report("TYPE_SETTING_AGILENT34401A", "info", "string", "Device setting type")
+        RFSE.Report("TYPE_SETTING_AGILENT34401A", "info", "string", "Тип настройки прибора")
 
         match type_setting_agilent:
-            case 'Automatic':
+            case 'Автоматически':
                 self.IsAutomatic = True
-                RFSE.Report("TYPE_SETTING_AGILENT34401A", "set", 'string', 'Automatic')
-            case "Manual":
+                RFSE.Report("TYPE_SETTING_AGILENT34401A", "set", 'string', 'Автоматически')
+            case "Вручную":
                 self.IsAutomatic = False
-                RFSE.Report("TYPE_SETTING_AGILENT34401A", "set", 'string', 'Manual')
+                RFSE.Report("TYPE_SETTING_AGILENT34401A", "set", 'string', 'Вручную')
 
         self.SET_TIMEOUT()
         self.SET_RESET()
@@ -62,11 +62,11 @@ class Agilent34401A:
 
     def INIT_DEVICE(self) -> str:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: AgilentDMM >> mode: init >> command: ', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: init >> команда: ', 'driver')
             return "connected"
         else:
-            RFSE.Messenger("set", "Make settings Agilent34401A#@agilent34401a",
-                           "Make settings:\nTurn on the device\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки Agilent34401A#@agilent34401a",
+                           "Произведите настройки:\nВключите прибор\nНажмите OK")
 
             return "connected"
 
@@ -76,10 +76,10 @@ class Agilent34401A:
 
     def SET_TIMEOUT(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: Timeout = 10000', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: Timeout = 10000', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings Agilent34401A#@agilent34401a",
-                           "Make settings:\nSet Reset\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки Agilent34401A#@agilent34401a",
+                           "Произведите настройки:\nСброс\nНажмите OK")
 
 #######################################################################################################################
 ############################################  Agilent34401A SET RESET  ################################################
@@ -87,10 +87,10 @@ class Agilent34401A:
 
     def SET_RESET(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: Reset', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: Reset', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings Agilent34401A#@agilent34401a",
-                           "Make settings:\nSet Timeout = 10000\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки Agilent34401A#@agilent34401a",
+                           "Произведите настройки:\nУстановите Timeout = 10000\nНажмите OK")
 
 #######################################################################################################################
 #############################################  Agilent34401A SET FUNC  ################################################
@@ -98,10 +98,10 @@ class Agilent34401A:
 
     def SET_FUNC(self, WireConnection: str) -> None:
         if self.IsAutomatic:
-            RFSE.Stage(f'Driver: AgilentDMM >> mode: set >> command: func = {WireConnection} ', 'driver')
+            RFSE.Stage(f'Драйвер: AgilentDMM >> режим: set >> команда: func = {WireConnection} ', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Agilent34401A#@agilent34401a',
-                           f'Make settings:\nSet func = {WireConnection}\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Agilent34401A#@agilent34401a',
+                           f'Произведите настройки:\nУстановите func = {WireConnection}\nНажмите OK')
 
 #######################################################################################################################
 #############################################  Agilent34401A SET NPLC  ################################################
@@ -109,10 +109,10 @@ class Agilent34401A:
 
     def SET_NPLC_100(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: NPLC = 100 ', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: NPLC = 100 ', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Agilent34401A#@agilent34401a',
-                           f'Make settings:\nSet NPLC = 100\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Agilent34401A#@agilent34401a',
+                           f'Произведите настройки:\nУстановите NPLC = 100\nНажмите OK')
 
 #######################################################################################################################
 #############################################  Agilent34401A SET RES  #################################################
@@ -120,10 +120,10 @@ class Agilent34401A:
 
     def SET_RES_MIN(self) -> None:
         if self.IsAutomatic:
-            RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: RES = MIN ', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: RES = MIN ', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Agilent34401A#@agilent34401a',
-                           'Set Resolution = MIN;\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Agilent34401A#@agilent34401a',
+                           'Установите разрешение = MIN;\nНажмите OK')
 
 #######################################################################################################################
 ############################################  Agilent34401A SET BAND  #################################################
@@ -132,10 +132,10 @@ class Agilent34401A:
     def SET_BAND_MIN(self) -> None:
 
         if self.IsAutomatic:
-            RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: BAND = 3 ', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: BAND = 3 ', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Agilent34401A#@agilent34401a',
-                           'Set the filter to 3 Hz;\nPress OK')
+            RFSE.Messenger('set', 'Произведите настройки на Agilent34401A#@agilent34401a',
+                           'Установите фильтр на 3 Гц;\nНажмите OK')
 
 #######################################################################################################################
 ###########################################  Agilent34401A SET RANGE  #################################################
@@ -143,10 +143,10 @@ class Agilent34401A:
     def SET_RANGE(self, range: (str | float | int)) -> None:
 
         if self.IsAutomatic:
-            RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: range = {range}', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: range = {range}', 'driver')
         else:
-            RFSE.Messenger("set", "Make settings on Agilent34401A#@agilent34401a",
-                           f"Make settings:\nSet range = {range}\nPress OK")
+            RFSE.Messenger("set", "Произведите настройки на Agilent34401A#@agilent34401a",
+                           f"Произведите настройки:\nУстановите диапазон = {range}\nНажмите OK")
 
 #######################################################################################################################
 ##########################################  Agilent34401A SET AUTOZERO  ###############################################
@@ -154,10 +154,10 @@ class Agilent34401A:
     def SET_AUTOZERO_ONCE(self) -> None:
 
         if self.IsAutomatic:
-            RFSE.Stage('Driver: AgilentDMM >> mode: set >> command: AUTOZERO = ONCE', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: set >> команда: AUTOZERO = ONCE', 'driver')
         else:
-            RFSE.Messenger('set', 'Make settings on Agilent34401A#@agilent34401a',
-                           'Set the resolution to 4th decimal places;\nClick OK')
+            RFSE.Messenger('set', 'Произведите настройки на Agilent34401A#@agilent34401a',
+                           'Установите разрешение до 4-го знака после запятой;\nНажмите OK')
 
 #######################################################################################################################
 ##########################################  Agilent34401A READ RESULT  ################################################
@@ -165,10 +165,10 @@ class Agilent34401A:
     def Read_Result(self, verified: (int, float)) -> (str, int, float):
 
         if self.IsAutomatic:
-            RFSE.Stage('DriverSet AgilentDMM >> mode: get >> command: result = read', 'driver')
+            RFSE.Stage('Драйвер: AgilentDMM >> режим: get >> команда: result = read', 'driver')
             result = verified
         else:
-            result = RFSE.Messenger("get", "Input result#@notes",
-                                    "Enter the measured result from Agilent34401A\nPress OK", "string")
+            result = RFSE.Messenger("get", "Введите результат#@notes",
+                                    "Введите измеренный результат с Agilent34401A\nНажмите OK", "string")
         RFSE.Stage(" ")
         return result

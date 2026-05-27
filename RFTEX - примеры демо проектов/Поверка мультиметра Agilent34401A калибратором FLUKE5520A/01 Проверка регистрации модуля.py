@@ -4,7 +4,7 @@ import MOSC
 RFSE.Stage("*********************************************************")
 RFSE.Stage("********* Скрипт проверки регистрации модуля *********")
 RFSE.Stage("*********************************************************")
-UtilityInfo = "RFTEX_example"
+UtilityInfo = "RFTEX_example_info"
 #region Регистрация оборудования$Reg
 MOSC.hashStatus("$Reg")
 RFSE.Program('tree', 'set', 'select = Регистрация оборудования$Reg')

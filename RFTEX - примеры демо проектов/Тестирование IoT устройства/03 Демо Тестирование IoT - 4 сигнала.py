@@ -2,7 +2,7 @@ import RFSE
 from MOSC import hashStatus, hash_passed, hash_failed
 from Demo_Test_IoT_4_Wave import Testing
 import MTLG
-MTLG.TelegramProgram('alpha', 'Демо Tестирование IoT - 4 сигнала', 'set', '')
+RFSE.Max('alpha', 'set', 'Демо Tестирование IoT - 4 сигнала')
 RFSE.Stage("*********************************************************************")
 RFSE.Stage("*************** Демо Tестирование IoT - 4 сигнала *******************")
 RFSE.Stage("*********************************************************************")

@@ -2,7 +2,7 @@ import RFSE
 import MTLG
 import MOSC
 
-MTLG.TelegramProgram('alpha', 'Сохранение Word отчета', 'set', 'init')
+RFSE.Max('alpha', 'set', 'Сохранение Word отчета')
 
 RFSE.Stage("*********************************************************")
 RFSE.Stage("*************** Сохранение Word отчета ******************")

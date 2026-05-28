@@ -2,7 +2,7 @@ import RFSE
 import MTLG
 from Demo_Test_IoT_4_Wave import Testing
 
-MTLG.TelegramProgram('alpha', 'Инициализация устройств', 'set', '')
+RFSE.Max('alpha', 'set', 'Инициализация устройств')
 
 RFSE.Stage("*********************************************************")
 RFSE.Stage("*************** Инициализация устройств *****************")
